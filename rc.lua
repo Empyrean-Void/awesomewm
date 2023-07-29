@@ -231,8 +231,8 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.widget.systray(),
             spacer,
             clock,
-            spacer,
-            volume,
+            -- spacer,
+            -- volume,
             spacer,
             battery,
             spacer
