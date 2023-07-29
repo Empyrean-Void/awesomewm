@@ -237,39 +237,51 @@ root.buttons(gears.table.join(
 globalkeys = gears.table.join(
     -- << User defined
     -- Web browser
-    awful.key({ modkey,           }, "w", function () awful.spawn.with_shell("firefox") end,
-              {description = "web browser", group = "launcher"}),
+    awful.key({ modkey }, "w", function ()
+        awful.spawn.with_shell("firefox")
+    end,
+        {description = "web browser", group = "launcher"}),
 
     -- Run promt
-    awful.key({ modkey },            "r",     function () awful.spawn.with_shell("dmenu_run") end,
-              {description = "run prompt", group = "launcher"}),
+    awful.key({ modkey }, "r", function ()
+        awful.spawn.with_shell("dmenu_run")
+    end,
+        {description = "run prompt", group = "launcher"}),
 
     -- File manager
-    awful.key({ modkey, "Shift"   }, "f", function () awful.spawn.with_shell("thunar") end,
-              {description = "file manager", group = "launcher"}),
+    awful.key({ modkey, "Shift" }, "f", function ()
+        awful.spawn.with_shell("thunar")
+    end,
+        {description = "file manager", group = "launcher"}),
+
+    -- Screenshot
+    awful.key({ modkey }, "Print", function ()
+        awful.spawn.with_shell("scrot ~/Pictures/screenshots/%Y-%m-%d-%H-%M-%S.png")
+    end,
+        {description = "take screenshot", group = "launcher"}),
     -- >>
 
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
-              {description="show help", group="awesome"}),
-    awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
-              {description = "view previous", group = "tag"}),
-    awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
-              {description = "view next", group = "tag"}),
-    awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
-              {description = "go back", group = "tag"}),
+    awful.key({ modkey }, "s", hotkeys_popup.show_help,
+        {description="show help", group="awesome"}),
 
-    awful.key({ modkey,           }, "j",
-        function ()
-            awful.client.focus.byidx( 1)
-        end,
-        {description = "focus next by index", group = "client"}
-    ),
-    awful.key({ modkey,           }, "k",
-        function ()
-            awful.client.focus.byidx(-1)
-        end,
-        {description = "focus previous by index", group = "client"}
-    ),
+    awful.key({ modkey }, "Left", awful.tag.viewprev,
+        {description = "view previous", group = "tag"}),
+
+    awful.key({ modkey }, "Right", awful.tag.viewnext,
+        {description = "view next", group = "tag"}),
+
+    awful.key({ modkey }, "Escape", awful.tag.history.restore,
+        {description = "go back", group = "tag"}),
+
+    awful.key({ modkey }, "j", function ()
+        awful.client.focus.byidx( 1)
+    end,
+        {description = "focus next by index", group = "client"}),
+
+    awful.key({ modkey }, "k", function ()
+        awful.client.focus.byidx(-1)
+    end,
+        {description = "focus previous by index", group = "client"}),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
