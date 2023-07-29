@@ -182,7 +182,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Each screen has its own tag table.
     if s.index == 1 then
-        awful.tag({ "Term", "Web", "Files", "Music" }, s, awful.layout.layouts[1])
+        awful.tag({ " ", "󰈹 ", " ", "󰎆 " }, s, awful.layout.layouts[1])
     else
         awful.tag({ "1", "2", "3", "4", "5" }, s, awful.layout.layouts[1])
     end
