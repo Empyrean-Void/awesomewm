@@ -32,6 +32,9 @@ theme.border_marked = "#91231c"
 
 theme.tasklist_disable_icon = true
 
+theme.titlebar_bg_focus = theme.bg_normal
+theme.titlebar_fg_focus = theme.fg_normal
+
 -- There are other variable sets
 -- overriding the default one when
 -- defined, the sets are:
