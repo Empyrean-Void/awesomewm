@@ -11,24 +11,26 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "sans 8"
+theme.font          = "JetBrainsMon Nerd Font 8"
 
 theme.bg_normal     = "#282c34"
 theme.bg_focus      = "#98c379"
 theme.bg_urgent     = "#e06c75"
-theme.bg_minimize   = "#98c379"
+theme.bg_minimize   = theme.bg_focus
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#abb2bf"
-theme.fg_focus      = "#282c34"
-theme.fg_urgent     = "#282c34"
-theme.fg_minimize   = "#282c34"
+theme.fg_focus      = theme.bg_normal
+theme.fg_urgent     = theme.bg_normal
+theme.fg_minimize   = theme.bg_normal
 
 theme.useless_gap   = dpi(2)
 theme.border_width  = dpi(2)
-theme.border_normal = "#282c34"
-theme.border_focus  = "#98c379"
+theme.border_normal = theme.bg_normal
+theme.border_focus  = theme.bg_focus
 theme.border_marked = "#91231c"
+
+theme.tasklist_disable_icon = true
 
 -- There are other variable sets
 -- overriding the default one when
@@ -57,6 +59,9 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- notification_[bg|fg]
 -- notification_[width|height|margin]
 -- notification_[border_color|border_width|shape|opacity]
+theme.notification_bg = theme.bg_normal
+theme.notification_fg = theme.fg_normal
+theme.notification_font = theme.font
 
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
