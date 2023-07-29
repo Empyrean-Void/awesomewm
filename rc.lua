@@ -236,29 +236,33 @@ root.buttons(gears.table.join(
 -- << Key bindings
 globalkeys = gears.table.join(
     -- << User defined
-    -- Web browser
+    -- Applications
     awful.key({ modkey }, "w", function ()
         awful.spawn.with_shell("firefox")
     end,
-        {description = "web browser", group = "launcher"}),
+        {description = "web browser", group = "applications"}),
 
-    -- Run promt
-    awful.key({ modkey }, "r", function ()
-        awful.spawn.with_shell("dmenu_run")
-    end,
-        {description = "run prompt", group = "launcher"}),
-
-    -- File manager
     awful.key({ modkey, "Shift" }, "f", function ()
         awful.spawn.with_shell("thunar")
     end,
-        {description = "file manager", group = "launcher"}),
+        {description = "file manager", group = "applications"}),
+
+    -- Menus
+    awful.key({ modkey }, "r", function ()
+        awful.spawn.with_shell("dmenu_run")
+    end,
+        {description = "application menu", group = "menu"}),
+
+    awful.key({ modkey }, "Escape", function ()
+        awful.spawn.with_shell("~/.config/awesome/scripts/power-menu.sh")
+    end,
+        {description = "power menu", group = "menu"}),
 
     -- Screenshot
     awful.key({ modkey }, "Print", function ()
         awful.spawn.with_shell("scrot ~/Pictures/screenshots/%Y-%m-%d-%H-%M-%S.png")
     end,
-        {description = "take screenshot", group = "launcher"}),
+        {description = "fullscreen", group = "screenshot"}),
     -- >>
 
     awful.key({ modkey }, "s", hotkeys_popup.show_help,
