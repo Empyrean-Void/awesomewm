@@ -9,7 +9,20 @@ local battery = wibox.widget {
 -- Function to update the battery widget
 local function update_battery_widget()
     awful.spawn.easy_async("/home/empyrean/.config/awesome/scripts/battery.sh", function(stdout)
-        battery.text = stdout
+        local battery_info = stdout:match("^Battery:%s+(%d+)%%")
+        local battery_percentage = tonumber(battery_info) or 0
+        -- Define colors for different battery levels
+        local color
+        if battery_percentage <= 20 then
+            color = "#e06c75" -- Red color for low battery
+        elseif battery_percentage <= 50 then
+            color = "#e5c07b" -- Yellow color for medium battery
+        else
+            color = "#98c379" -- Green color for high battery
+        end
+
+        -- Apply color to the text using the markup function
+        battery.markup = "<span color='" .. color .. "'>Battery: " .. battery_percentage .. "%</span>"
     end)
 end
 

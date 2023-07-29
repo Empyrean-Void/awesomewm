@@ -229,11 +229,11 @@ awful.screen.connect_for_each_screen(function(s)
             -- mykeyboardlayout,
             wibox.widget.systray(),
             spacer,
+            clock,
+            spacer,
             volume,
             spacer,
             battery,
-            spacer,
-            clock,
             spacer,
             s.mylayoutbox,
         },
@@ -279,6 +279,22 @@ globalkeys = gears.table.join(
         awful.spawn.with_shell("scrot ~/Pictures/screenshots/%Y-%m-%d-%H-%M-%S.png")
     end,
         {description = "fullscreen", group = "screenshot"}),
+
+    -- volume
+    awful.key({ }, "XF86AudioMute", function ()
+        awful.spawn.with_shell("pactl set-sink-mute @DEFAULT_SINK@ toggle")
+    end,
+        {description = "mute volume", group = "audio"}),
+
+    awful.key({ }, "XF86AudioLowerVolume", function ()
+        awful.spawn.with_shell("pactl set-sink-volume @DEFAULT_SINK@ -5%")
+    end,
+        {description = "lower volume", group = "audio"}),
+
+    awful.key({ }, "XF86AudioRaiseVolume", function ()
+        awful.spawn.with_shell("pactl set-sink-volume @DEFAULT_SINK@ +5%")
+    end,
+        {description = "raise volume", group = "audio"}),
     -- >>
 
     awful.key({ modkey }, "s", hotkeys_popup.show_help,
