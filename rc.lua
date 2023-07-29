@@ -224,20 +224,18 @@ awful.screen.connect_for_each_screen(function(s)
             s.mytaglist,
             s.mypromptbox,
         },
-        wibox.container.place(
-            clock,
-            'center',
-            'center'
-        ), -- Middle widget
+        nil,
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             -- mykeyboardlayout,
             wibox.widget.systray(),
             spacer,
-            battery,
+            clock,
             spacer,
             volume,
             spacer,
+            battery,
+            spacer
             -- s.mylayoutbox,
         },
     }

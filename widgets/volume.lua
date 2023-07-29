@@ -1,5 +1,6 @@
 local wibox = require("wibox")
 local awful = require("awful")
+local naughty = require("naughty")
 
 -- volume widget
 local volume = wibox.widget {
@@ -27,7 +28,13 @@ local function update_volume_widget()
         end
 
         -- Apply color to the text using the markup function
-        volume.markup = "<span color='" .. color .. "'>Vol: " .. volume_percentage .. "%</span>"
+        volume.markup = "<span color='" .. color .. "' font='12'>" .. "󰕾 " .. "</span>"
+
+        -- naughty.notify({
+        --     title = "Volume",
+        --     text = "Volume: " .. volume_percentage .. "%",
+        --     timeout = 3 -- Duration of the notification in seconds
+        -- })
     end)
 end
 
