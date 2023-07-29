@@ -22,7 +22,7 @@ local function update_battery_widget()
         end
 
         -- Apply color to the text using the markup function
-        battery.markup = "<span color='" .. color .. "'>Battery: " .. battery_percentage .. "%</span>"
+        battery.markup = "<span color='" .. color .. "'>Bat: " .. battery_percentage .. "%</span>"
     end)
 end
 

@@ -27,7 +27,7 @@ local function update_volume_widget()
         end
 
         -- Apply color to the text using the markup function
-        volume.markup = "<span color='" .. color .. "'>Volume: " .. volume_percentage .. "%</span>"
+        volume.markup = "<span color='" .. color .. "'>Vol: " .. volume_percentage .. "%</span>"
     end)
 end
 
