@@ -208,7 +208,8 @@ awful.screen.connect_for_each_screen(function(s)
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = tasklist_buttons
+        buttons = tasklist_buttons,
+        tasklist_align = "center"
     }
 
     -- Create the wibox
@@ -223,7 +224,11 @@ awful.screen.connect_for_each_screen(function(s)
             s.mytaglist,
             s.mypromptbox,
         },
-        s.mytasklist, -- Middle widget
+        wibox.container.place(
+            clock,
+            'center',
+            'center'
+        ), -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             -- mykeyboardlayout,
@@ -232,8 +237,6 @@ awful.screen.connect_for_each_screen(function(s)
             battery,
             spacer,
             volume,
-            spacer,
-            clock,
             spacer,
             s.mylayoutbox,
         },
