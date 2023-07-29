@@ -83,6 +83,7 @@ awful.layout.layouts = {
 -- << Scripts
 awful.spawn.with_shell("~/.config/awesome/scripts/autorun.sh")
 awful.spawn.with_shell("~/.config/awesome/scripts/display-layout.sh")
+awful.spawn.with_shell("~/.local/bin/legion-kb-rgb load-profile -p ~/.config/keyboard-rgb/forest.json")
 -- >>
 
 -- << Menu
