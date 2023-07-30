@@ -9,5 +9,4 @@ run() {
 
 run "picom"
 run "numlockx"
-run "nm-applet"
 run "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"

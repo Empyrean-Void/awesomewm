@@ -22,7 +22,7 @@ require("awful.hotkeys_popup.keys")
 local battery = require("widgets.battery")
 local clock = require("widgets.clock")
 local spacer = require("widgets.spacer")
-local volume = require("widgets.volume")
+local wifi = require("widgets.wifi")
 
 -- << Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -220,23 +220,20 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            -- mylauncher,
             s.mytaglist,
             s.mypromptbox,
         },
         nil,
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            -- mykeyboardlayout,
             wibox.widget.systray(),
             spacer,
             clock,
-            -- spacer,
-            -- volume,
+            spacer,
+            wifi,
             spacer,
             battery,
             spacer
-            -- s.mylayoutbox,
         },
     }
 end)
@@ -274,6 +271,11 @@ globalkeys = gears.table.join(
         awful.spawn.with_shell("~/.config/awesome/scripts/power-menu.sh")
     end,
         {description = "power menu", group = "menu"}),
+
+    awful.key({ modkey }, "c", function ()
+        awful.spawn.with_shell("~/.config/awesome/scripts/networks.sh")
+    end,
+        {description = "network menu", group = "menu"}),
 
     -- Screenshot
     awful.key({ modkey }, "Print", function ()
