@@ -16,3 +16,5 @@ $ sudo pacman -S wezterm nm-applet ttf-jetbrains-mono-nerd picom neovim acpi
 ```
 
 ## Screenshots
+
+<img src="screenshots/awesome.png" width="640" height="360">
