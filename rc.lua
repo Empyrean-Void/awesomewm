@@ -69,20 +69,6 @@ modkey = "Mod4"
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.floating,
-    -- awful.layout.suit.tile.left,
-    -- awful.layout.suit.tile.bottom,
-    -- awful.layout.suit.tile.top,
-    -- awful.layout.suit.fair,
-    -- awful.layout.suit.fair.horizontal,
-    -- awful.layout.suit.spiral,
-    -- awful.layout.suit.spiral.dwindle,
-    -- awful.layout.suit.max,
-    -- awful.layout.suit.max.fullscreen,
-    -- awful.layout.suit.magnifier,
-    -- awful.layout.suit.corner.nw,
-    -- awful.layout.suit.corner.ne,
-    -- awful.layout.suit.corner.sw,
-    -- awful.layout.suit.corner.se,
 }
 -- >>
 
@@ -90,28 +76,6 @@ awful.layout.layouts = {
 awful.spawn.with_shell("~/.config/awesome/scripts/autorun.sh")
 awful.spawn.with_shell("~/.config/awesome/scripts/display-layout.sh")
 awful.spawn.with_shell("~/.local/bin/legion-kb-rgb load-profile -p ~/.config/keyboard-rgb/forest.json")
--- >>
-
--- << Menu
--- Create a launcher widget and a main menu
-myawesomemenu = {
-   { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-   { "manual", terminal .. " -e man awesome" },
-   { "edit config", editor_cmd .. " " .. awesome.conffile },
-   { "restart", awesome.restart },
-   { "quit", function() awesome.quit() end },
-}
-
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
-                                  }
-                        })
-
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
-
--- Menubar configuration
-menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- >>
 
 -- Keyboard map indicator and switcher
@@ -184,7 +148,7 @@ awful.screen.connect_for_each_screen(function(s)
     if s.index == 1 then
         awful.tag({ " ", "󰈹 ", " ", "󰎆 " }, s, awful.layout.layouts[1])
     else
-        awful.tag({ "1", "2", "3", "4", "5" }, s, awful.layout.layouts[1])
+        awful.tag({ "1", "2", "3", "4" }, s, awful.layout.layouts[1])
     end
 
     -- Create a promptbox for each screen
@@ -267,15 +231,25 @@ globalkeys = gears.table.join(
     end,
         {description = "application menu", group = "menu"}),
 
-    awful.key({ modkey }, "p", function ()
+    awful.key({ modkey }, "Escape", function ()
         awful.spawn.with_shell("~/.config/awesome/scripts/power-menu.sh")
     end,
         {description = "power menu", group = "menu"}),
 
-    awful.key({ modkey }, "c", function ()
+    awful.key({ modkey, "Shift" }, "Escape", function ()
+        awful.spawn.with_shell("~/.config/awesome/scripts/power-save.sh")
+    end,
+        {description = "power saving menu", group = "menu"}),
+
+    awful.key({ modkey }, "n", function ()
         awful.spawn.with_shell("~/.config/awesome/scripts/networks.sh")
     end,
         {description = "network menu", group = "menu"}),
+
+    awful.key({ modkey }, "d", function ()
+        awful.spawn.with_shell("~/.config/awesome/scripts/display-mode.sh")
+    end,
+        {description = "display menu", group = "menu"}),
 
     -- Screenshot
     awful.key({ modkey }, "Print", function ()
@@ -308,9 +282,6 @@ globalkeys = gears.table.join(
 
     awful.key({ modkey }, "Right", awful.tag.viewnext,
         {description = "view next", group = "tag"}),
-
-    awful.key({ modkey }, "Escape", awful.tag.history.restore,
-        {description = "go back", group = "tag"}),
 
     awful.key({ modkey }, "j", function ()
         awful.client.focus.byidx( 1)
@@ -397,13 +368,6 @@ clientkeys = gears.table.join(
               {description = "move to screen", group = "client"}),
     awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
               {description = "toggle keep on top", group = "client"}),
-    awful.key({ modkey,           }, "n",
-        function (c)
-            -- The client currently has the input focus, so it cannot be
-            -- minimized, since minimized clients can't have the focus.
-            c.minimized = true
-        end ,
-        {description = "minimize", group = "client"}),
     awful.key({ modkey,           }, "m",
         function (c)
             c.maximized = not c.maximized
