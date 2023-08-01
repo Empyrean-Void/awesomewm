@@ -25,11 +25,11 @@ local function update_wifi_widget()
         -- Define colors for different signal strength levels
         local color
         if signal >= -60 then
-            color = "#98c379" -- Green color for strong signal
+            color = "#8ccf7e" -- Green color for strong signal
         elseif signal >= -70 then
-            color = "#e5c07b" -- Yellow color for medium signal
+            color = "#e5c76b" -- Yellow color for medium signal
         else
-            color = "#e06c75" -- Red color for weak signal
+            color = "#e57474" -- Red color for weak signal
         end
 
         -- Update the WiFi widget with the new markup and font size
