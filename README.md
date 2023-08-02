@@ -1,6 +1,11 @@
 # awesomewm
 Dotfiles for the Awesome window manager
 
+## To Do
+- [ ] Split up config
+- [ ] Replace dmenu with lua widgets
+
+
 ## Install
 
 **For Arch users:**
