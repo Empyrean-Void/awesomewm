@@ -18,7 +18,7 @@ local function update_wifi_widget()
 
         -- Check if WiFi is connected or not
         if not connected then
-            wifi_widget.markup = "<span color='#e06c75' font='" .. font_size .. "'>󰤭 </span>"
+            wifi_widget.markup = "<span color='#e06c75' font='" .. font_size .. "'>󰤯 </span>"
             return
         end
 
