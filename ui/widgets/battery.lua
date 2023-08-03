@@ -14,11 +14,11 @@ local function update_battery_widget()
         -- Define colors for different battery levels
         local color
         if battery_percentage <= 20 then
-            color = "#e57474" -- Red color for low battery
+            color = "#e67e80" -- Red color for low battery
         elseif battery_percentage <= 50 then
-            color = "#e5c76b" -- Yellow color for medium battery
+            color = "#dbbc7f" -- Yellow color for medium battery
         else
-            color = "#8ccf7e" -- Green color for high battery
+            color = "#a7c080" -- Green color for high battery
         end
 
         -- Apply color to the text using the markup function
