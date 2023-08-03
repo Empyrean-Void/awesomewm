@@ -10,13 +10,13 @@ local theme = {}
 
 theme.font          = "Terminess Nerd Font 10"
 
-theme.bg_normal     = "#141b1e"
-theme.bg_focus      = "#8ccf7e"
-theme.bg_urgent     = "#e57474"
+theme.bg_normal     = "#2d353b"
+theme.bg_focus      = "#a7c080"
+theme.bg_urgent     = "#e67e80"
 theme.bg_minimize   = theme.bg_focus
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#dadada"
+theme.fg_normal     = "#d3c6aa"
 theme.fg_focus      = theme.bg_normal
 theme.fg_urgent     = theme.bg_normal
 theme.fg_minimize   = theme.bg_normal
