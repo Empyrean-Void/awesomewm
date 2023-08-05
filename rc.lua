@@ -78,7 +78,7 @@ awful.layout.layouts = {
 -- << Scripts
 awful.spawn.with_shell("~/.config/awesome/scripts/autorun.sh")
 awful.spawn.with_shell("~/.config/awesome/scripts/display-layout.sh")
-awful.spawn.with_shell("~/.local/bin/legion-kb-rgb load-profile -p ~/.config/keyboard-rgb/forest.json")
+awful.spawn.with_shell("~/.local/bin/legion-kb-rgb load-profile -p ~/.config/keyboard-rgb/disco")
 -- >>
 
 -- Keyboard map indicator and switcher
@@ -134,7 +134,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Bar
     if s.index == 1 then
-        awful.tag({ " ", "󰈹 ", " ", "󰎆 " }, s, awful.layout.layouts[1])
+        awful.tag({ "1", "2", "3", "4" }, s, awful.layout.layouts[1])
     else
         awful.tag({ "1", "2", "3", "4" }, s, awful.layout.layouts[1])
     end
@@ -163,14 +163,17 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             s.mytaglist,
-            s.mypromptbox,
         },
-        nil,
+        {
+            layout = wibox.container.place,
+            clock,
+            valign = "center",
+            halign = "center"
+        },
+
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
-            spacer,
-            clock,
             spacer,
             wifi,
             spacer,

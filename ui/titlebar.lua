@@ -22,15 +22,13 @@ local function setup_titlebars(c)
             layout  = wibox.layout.fixed.horizontal
         },
         { -- Middle
-            { -- Title
-                align  = "center",
-                widget = awful.titlebar.widget.titlewidget(c)
-            },
-            buttons = buttons,
-            layout  = wibox.layout.flex.horizontal
+            layout = wibox.layout.fixed.horizontal
         },
         { -- Right
+            awful.titlebar.widget.maximizedbutton(c),
+            awful.titlebar.widget.closebutton    (c),
             layout = wibox.layout.fixed.horizontal()
+
         },
         layout = wibox.layout.align.horizontal
     }

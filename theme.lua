@@ -8,7 +8,7 @@ local dpi = xresources.apply_dpi
 
 local theme = {}
 
-theme.font          = "Terminess Nerd Font 10"
+theme.font          = "BlexMono Nerd Font 10"
 
 theme.bg_normal     = "#2d353b"
 theme.bg_focus      = "#a7c080"
@@ -47,6 +47,9 @@ theme.notification_fg = theme.fg_normal
 theme.notification_font = theme.font
 
 theme.wallpaper = "/home/empyrean/Pictures/wallpapers/forest.png"
+
+theme.titlebar_close_button_normal = "/home/empyrean/.config/awesome/ui/close.svg"
+theme.titlebar_maximized_button_normal_inactive = "/home/empyrean/.config/awesome/ui/max_inactive.svg"
 
 return theme
 
