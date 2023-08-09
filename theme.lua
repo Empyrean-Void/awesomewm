@@ -6,6 +6,8 @@ local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
 
+local awepath = "/home/empyrean/.config/awesome"
+
 local theme = {}
 
 theme.font          = "BlexMono Nerd Font 10"
@@ -21,13 +23,10 @@ theme.fg_focus      = theme.bg_normal
 theme.fg_urgent     = theme.bg_normal
 theme.fg_minimize   = theme.bg_normal
 
-theme.useless_gap   = dpi(2)
-theme.border_width  = dpi(2)
+theme.useless_gap   = dpi(5)
+theme.border_width  = dpi(0)
 theme.border_normal = theme.bg_normal
 theme.border_focus  = theme.bg_focus
-theme.border_marked = "#91231c"
-
-theme.tasklist_disable_icon = true
 
 theme.titlebar_bg_focus = theme.bg_normal
 theme.titlebar_fg_focus = theme.fg_normal
@@ -48,8 +47,12 @@ theme.notification_font = theme.font
 
 theme.wallpaper = "/home/empyrean/Pictures/wallpapers/forest.png"
 
-theme.titlebar_close_button_normal = "/home/empyrean/.config/awesome/ui/close.svg"
-theme.titlebar_maximized_button_normal_inactive = "/home/empyrean/.config/awesome/ui/max_inactive.svg"
+theme.titlebar_close_button_normal = "/home/empyrean/.config/awesome/ui/inactive.svg"
+theme.titlebar_maximized_button_normal_inactive = "/home/empyrean/.config/awesome/ui/inactive.svg"
+
+theme.titlebar_close_button_focus = "/home/empyrean/.config/awesome/ui/close.svg"
+theme.titlebar_maximized_button_focus_inactive = "/home/empyrean/.config/awesome/ui/max.svg"
+theme.titlebar_maximized_button_focus_active = "/home/empyrean/.config/awesome/ui/max.svg"
 
 return theme
 
