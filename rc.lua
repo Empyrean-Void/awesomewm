@@ -234,17 +234,34 @@ globalkeys = gears.table.join(
   awful.key({}, "XF86AudioLowerVolume", function ()
     awful.spawn.with_shell("pactl set-sink-volume 0 -5%")
   end,
-    {description = "mute volume", group = "volume"}),
+    {description = "lower volume", group = "volume"}),
 
   awful.key({}, "XF86AudioRaiseVolume", function ()
     awful.spawn.with_shell("pactl set-sink-volume 0 +5%")
   end,
-    {description = "mute volume", group = "volume"}),
+    {description = "raise volume", group = "volume"}),
 
+  -- Brightness
+  awful.key({}, "XF86MonBrightnessDown", function ()
+    awful.spawn.with_shell("brightnessctl set 5%-")
+  end,
+    {description = "lower brightness", group = "brightness"}),
+
+  awful.key({}, "XF86MonBrightnessUp", function ()
+    awful.spawn.with_shell("brightnessctl set +5%")
+  end,
+    {description = "raise brightness", group = "brightness"}),
+
+  -- Screenshots
   awful.key({ modkey }, "Print", function ()
     awful.spawn.with_shell("scrot ~/Pictures/screenshots/%Y-%m-%d-%H-%M-%S.png")
   end,
     {description = "fullscreen", group = "screenshot"}),
+
+  awful.key({ modkey, "Shift" }, "Print", function ()
+    awful.spawn.with_shell("scrot -s ~/Pictures/screenshots/%Y-%m-%d-%H-%M-%S.png")
+  end,
+    {description = "select", group = "screenshot"}),
 
   awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
     {description="show help", group="awesome"}),
