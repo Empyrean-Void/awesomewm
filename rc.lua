@@ -69,20 +69,6 @@ modkey = "Mod4"
 awful.layout.layouts = {
   awful.layout.suit.floating,
   awful.layout.suit.tile,
-  -- awful.layout.suit.tile.left,
-  -- awful.layout.suit.tile.bottom,
-  -- awful.layout.suit.tile.top,
-  -- awful.layout.suit.fair,
-  -- awful.layout.suit.fair.horizontal,
-  -- awful.layout.suit.spiral,
-  -- awful.layout.suit.spiral.dwindle,
-  -- awful.layout.suit.max,
-  -- awful.layout.suit.max.fullscreen,
-  -- awful.layout.suit.magnifier,
-  -- awful.layout.suit.corner.nw,
-  -- awful.layout.suit.corner.ne,
-  -- awful.layout.suit.corner.sw,
-  -- awful.layout.suit.corner.se,
 }
 -- }}}
 
@@ -233,10 +219,33 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
+  -- Web browser
+  awful.key({ modkey }, "w", function ()
+    awful.spawn.with_shell("chromium")
+  end,
+    {description = "open web browser", group = "applications"}),
+
+  -- Volume
+  awful.key({}, "XF86AudioMute", function ()
+    awful.spawn.with_shell("pactl set-sink-mute 0 toggle")
+  end,
+    {description = "mute volume", group = "volume"}),
+
+  awful.key({}, "XF86AudioLowerVolume", function ()
+    awful.spawn.with_shell("pactl set-sink-volume 0 -5%")
+  end,
+    {description = "mute volume", group = "volume"}),
+
+  awful.key({}, "XF86AudioRaiseVolume", function ()
+    awful.spawn.with_shell("pactl set-sink-volume 0 +5%")
+  end,
+    {description = "mute volume", group = "volume"}),
+
   awful.key({ modkey }, "Print", function ()
     awful.spawn.with_shell("scrot ~/Pictures/screenshots/%Y-%m-%d-%H-%M-%S.png")
   end,
     {description = "fullscreen", group = "screenshot"}),
+
   awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
     {description="show help", group="awesome"}),
   awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
@@ -258,8 +267,6 @@ globalkeys = gears.table.join(
     end,
     {description = "focus previous by index", group = "client"}
   ),
-  awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
-    {description = "show main menu", group = "awesome"}),
 
   -- Layout manipulation
   awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
