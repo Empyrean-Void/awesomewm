@@ -54,6 +54,14 @@ theme.taglist_bg_focus = "#4f535c"
 -- notification_[bg|fg]
 -- notification_[width|height|margin]
 -- notification_[border_color|border_width|shape|opacity]
+theme.notification_bg = "#282c34"
+theme.notification_fg = "#abb2bf"
+
+theme.notification_border_color = "#4f535c"
+theme.notification_border_width = dpi(2)
+
+theme.notification_width = 200
+theme.notification_height = 50
 
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
