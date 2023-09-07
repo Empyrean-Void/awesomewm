@@ -12,6 +12,7 @@ local function create_titlebar(c)
 			layout = wibox.layout.flex.horizontal,
 		},
 		{ -- Right
+			awful.titlebar.widget.minimizebutton(c),
 			awful.titlebar.widget.maximizedbutton(c),
 			awful.titlebar.widget.closebutton(c),
 			layout = wibox.layout.fixed.horizontal(),

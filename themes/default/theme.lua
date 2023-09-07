@@ -86,6 +86,9 @@ theme.titlebar_maximized_button_focus_inactive = "/home/void/.config/awesome/the
 theme.titlebar_maximized_button_normal_active = "/home/void/.config/awesome/themes/default/titlebar/max_normal.svg"
 theme.titlebar_maximized_button_focus_active = "/home/void/.config/awesome/themes/default/titlebar/max.svg"
 
+theme.titlebar_minimize_button_normal = "/home/void/.config/awesome/themes/default/titlebar/min_normal.svg"
+theme.titlebar_minimize_button_focus = "/home/void/.config/awesome/themes/default/titlebar/min.svg"
+
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path .. "default/layouts/fairhw.png"
 theme.layout_fairv = themes_path .. "default/layouts/fairvw.png"
