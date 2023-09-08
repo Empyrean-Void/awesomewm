@@ -78,15 +78,15 @@ theme.tasklist_disable_icon = true
 --theme.bg_widget = "#cc0000"
 
 -- Define the image to load
-theme.titlebar_close_button_normal = "/home/void/.config/awesome/themes/default/titlebar/close_normal.svg"
+theme.titlebar_close_button_normal = "/home/void/.config/awesome/themes/default/titlebar/normal.svg"
 theme.titlebar_close_button_focus = "/home/void/.config/awesome/themes/default/titlebar/close.svg"
 
-theme.titlebar_maximized_button_normal_inactive = "/home/void/.config/awesome/themes/default/titlebar/max_normal.svg"
+theme.titlebar_maximized_button_normal_inactive = "/home/void/.config/awesome/themes/default/titlebar/normal.svg"
 theme.titlebar_maximized_button_focus_inactive = "/home/void/.config/awesome/themes/default/titlebar/max.svg"
-theme.titlebar_maximized_button_normal_active = "/home/void/.config/awesome/themes/default/titlebar/max_normal.svg"
+theme.titlebar_maximized_button_normal_active = "/home/void/.config/awesome/themes/default/titlebar/normal.svg"
 theme.titlebar_maximized_button_focus_active = "/home/void/.config/awesome/themes/default/titlebar/max.svg"
 
-theme.titlebar_minimize_button_normal = "/home/void/.config/awesome/themes/default/titlebar/min_normal.svg"
+theme.titlebar_minimize_button_normal = "/home/void/.config/awesome/themes/default/titlebar/normal.svg"
 theme.titlebar_minimize_button_focus = "/home/void/.config/awesome/themes/default/titlebar/min.svg"
 
 -- You can use your own layout icons like this:
