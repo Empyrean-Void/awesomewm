@@ -71,13 +71,11 @@ theme.menu_height = dpi(15)
 theme.menu_width = dpi(100)
 
 theme.tasklist_disable_icon = true
+theme.tasklist_bg_focus = "#4f535c"
+theme.tasklist_bg_normal = "#282c34"
+theme.tasklist_bg_minimize = "#393d45"
 
--- You can add as many variables as
--- you wish and access them by using
--- beautiful.variable in your rc.lua
---theme.bg_widget = "#cc0000"
-
--- Define the image to load
+-- Titlebar buttons
 theme.titlebar_close_button_normal = "/home/void/.config/awesome/themes/default/titlebar/normal.svg"
 theme.titlebar_close_button_focus = "/home/void/.config/awesome/themes/default/titlebar/close.svg"
 
