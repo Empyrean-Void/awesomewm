@@ -54,7 +54,6 @@ local function create_wibar(s)
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
             mytextclock,
-            mylayoutbox,
         },
     })
 end
