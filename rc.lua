@@ -207,6 +207,11 @@ globalkeys = gears.table.join(
 		awful.spawn.with_shell("chromium")
 		end, { description = "open web browser", group = "applications" }),
 
+	-- File manager
+	awful.key({ modkey, "Shift", }, "f", function()
+		awful.spawn.with_shell("thunar")
+		end, { description = "open file manager", group = "applications" }),
+
 	-- Volume
 	awful.key({}, "XF86AudioMute", function()
 		awful.spawn.with_shell("pactl set-sink-mute 0 toggle")
@@ -451,21 +456,9 @@ awful.rules.rules = {
 	{
 		rule_any = {
 			instance = {
-				"DTA", -- Firefox addon DownThemAll.
-				"copyq", -- Includes session name in class.
-				"pinentry",
 			},
 			class = {
-				"Arandr",
-				"Blueman-manager",
-				"Gpick",
-				"Kruler",
-				"MessageWin", -- kalarm.
-				"Sxiv",
-				"Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
-				"Wpa_gui",
-				"veromix",
-				"xtightvncviewer",
+				"Thunar",
 			},
 
 			-- Note that the name property shown in xprop might be set slightly after creation of the client
@@ -474,8 +467,6 @@ awful.rules.rules = {
 				"Event Tester", -- xev.
 			},
 			role = {
-				"AlarmWindow", -- Thunderbird's calendar.
-				"ConfigManager", -- Thunderbird's about:config.
 				"pop-up", -- e.g. Google Chrome's (detached) Developer Tools.
 			},
 		},
@@ -484,10 +475,6 @@ awful.rules.rules = {
 
 	-- Add titlebars to normal clients and dialogs
 	{ rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = true } },
-
-	-- Set Firefox to always map on the tag named "2" on screen 1.
-	-- { rule = { class = "Firefox" },
-	--   properties = { screen = 1, tag = "2" } },
 }
 -- }}}
 
