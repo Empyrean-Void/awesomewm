@@ -24,7 +24,6 @@ wibar = require("ui.wibar")
 
 -- Auto start
 awful.spawn.with_shell("~/.config/awesome/scripts/display-layout.sh")
-awful.spawn.with_shell("~/.fehbg")
 awful.spawn.with_shell("picom")
 
 -- {{{ Error handling
@@ -61,7 +60,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "default")
+local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "samurai")
 beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
@@ -161,22 +160,22 @@ local tasklist_buttons = gears.table.join(
 	end)
 )
 
--- local function set_wallpaper(s)
---     -- Wallpaper
---     if beautiful.wallpaper then
---         local wallpaper = beautiful.wallpaper
---         -- If wallpaper is a function, call it with the screen
---         if type(wallpaper) == "function" then
---             wallpaper = wallpaper(s)
---         end
---         gears.wallpaper.maximized(wallpaper, s, true)
---     end
--- end
+local function set_wallpaper(s)
+    -- Wallpaper
+    if beautiful.wallpaper then
+        local wallpaper = beautiful.wallpaper
+        -- If wallpaper is a function, call it with the screen
+        if type(wallpaper) == "function" then
+            wallpaper = wallpaper(s)
+        end
+        gears.wallpaper.maximized(wallpaper, s, true)
+    end
+end
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 awful.screen.connect_for_each_screen(function(s)
 	-- Wallpaper
-	-- set_wallpaper(s)
+	set_wallpaper(s)
 
 	-- Each screen has its own tag table.
 	awful.tag({ "1", "2", "3", "4", "5" }, s, awful.layout.layouts[1])
