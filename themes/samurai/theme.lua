@@ -89,7 +89,7 @@ theme.titlebar_close_button_normal = string.format("%s/.config/awesome/themes/%s
 theme.titlebar_close_button_focus = string.format("%s/.config/awesome/themes/%s/titlebar/close.svg", os.getenv("HOME"), "samurai")
 
 -- Wallpaper
-theme.wallpaper = string.format("%s/Pictures/wallpapers/%s/wallpaper.png", os.getenv("HOME"), "samurai")
+theme.wallpaper = string.format("%s/Pictures/wallpapers/%s.png", os.getenv("HOME"), "samurai")
 
 -- Icons
 theme.icon_theme = nil
