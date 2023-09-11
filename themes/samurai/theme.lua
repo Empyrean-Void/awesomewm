@@ -9,19 +9,19 @@ local theme = {}
 theme.font = "Hack Nerd Font 9"
 
 -- Colors
-theme.bg_normal = "#292929"
+theme.bg_normal = "#262626"
 theme.fg_normal = "#abb2bf"
 
-theme.bg_focus = "#292929"
+theme.bg_focus = "#262626"
 theme.fg_focus = "#abb2bf"
 
 theme.bg_urgent = "#e06c75"
-theme.fg_urgent = "#292929"
+theme.fg_urgent = "#262626"
 
 theme.bg_minimize = "#3a3a3a"
 theme.fg_minimize = "#abb2bf"
 
-theme.bg_accent = "#577784"
+theme.bg_accent = "#937aa3"
 
 -- System tray
 theme.bg_systray = theme.bg_normal
@@ -89,7 +89,7 @@ theme.titlebar_close_button_normal = string.format("%s/.config/awesome/themes/%s
 theme.titlebar_close_button_focus = string.format("%s/.config/awesome/themes/%s/titlebar/close.svg", os.getenv("HOME"), "samurai")
 
 -- Wallpaper
-theme.wallpaper = string.format("%s/Pictures/wallpapers/%s.png", os.getenv("HOME"), "samurai")
+theme.wallpaper = string.format("%s/.config/awesome/themes/%s/wallpaper.png", os.getenv("HOME"), "samurai")
 
 -- Icons
 theme.icon_theme = nil
