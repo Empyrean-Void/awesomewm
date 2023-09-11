@@ -13,8 +13,8 @@ local theme = {}
 
 theme.font = "sans 8"
 
-theme.bg_normal = "#282c34"
-theme.bg_focus = "#282c34"
+theme.bg_normal = "#292929"
+theme.bg_focus = "#292929"
 theme.bg_urgent = "#e06c75"
 theme.bg_minimize = "#4f535c"
 theme.bg_systray = theme.bg_normal
@@ -47,8 +47,8 @@ theme.border_marked = "#cd5840"
 local taglist_square_size = dpi(4)
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(taglist_square_size, theme.fg_normal)
 theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_size, theme.fg_normal)
-theme.taglist_bg_focus = "#577784"
-theme.taglist_fg_focus = "#282c34"
+theme.taglist_bg_focus = "#3a3a3a"
+theme.taglist_fg_focus = "#abb2bf"
 
 -- Variables set for theming notifications:
 -- notification_font
@@ -72,9 +72,9 @@ theme.menu_height = dpi(15)
 theme.menu_width = dpi(100)
 
 theme.tasklist_disable_icon = true
-theme.tasklist_bg_focus = "#577784"
-theme.tasklist_fg_focus = "#282c34"
-theme.tasklist_bg_normal = "#282c34"
+theme.tasklist_bg_focus = "#3a3a3a"
+theme.tasklist_fg_focus = "#abb2bf"
+theme.tasklist_bg_normal = "#292929"
 theme.tasklist_bg_minimize = "#4f535c"
 
 -- Titlebar buttons
