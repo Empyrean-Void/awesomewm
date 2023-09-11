@@ -47,7 +47,8 @@ theme.border_marked = "#cd5840"
 local taglist_square_size = dpi(4)
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(taglist_square_size, theme.fg_normal)
 theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_size, theme.fg_normal)
-theme.taglist_bg_focus = "#4f535c"
+theme.taglist_bg_focus = "#577784"
+theme.taglist_fg_focus = "#282c34"
 
 -- Variables set for theming notifications:
 -- notification_font
@@ -57,7 +58,7 @@ theme.taglist_bg_focus = "#4f535c"
 theme.notification_bg = "#282c34"
 theme.notification_fg = "#abb2bf"
 
-theme.notification_border_color = "#4f535c"
+theme.notification_border_color = "#282c34"
 theme.notification_border_width = dpi(2)
 
 theme.notification_width = 200
@@ -71,9 +72,10 @@ theme.menu_height = dpi(15)
 theme.menu_width = dpi(100)
 
 theme.tasklist_disable_icon = true
-theme.tasklist_bg_focus = "#4f535c"
+theme.tasklist_bg_focus = "#577784"
+theme.tasklist_fg_focus = "#282c34"
 theme.tasklist_bg_normal = "#282c34"
-theme.tasklist_bg_minimize = "#393d45"
+theme.tasklist_bg_minimize = "#4f535c"
 
 -- Titlebar buttons
 theme.titlebar_close_button_normal = "/home/void/.config/awesome/themes/default/titlebar/normal.svg"
