@@ -1,4 +1,4 @@
--- Samurai theme --
+-- Subtle Gray theme --
 
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
@@ -76,20 +76,20 @@ theme.tasklist_spacing = dpi(2)
 theme.tasklist_disable_icon = true
 
 -- Titlebar buttons
-theme.titlebar_minimize_button_normal = string.format("%s/.config/awesome/themes/%s/titlebar/normal.svg", os.getenv("HOME"), "samurai")
-theme.titlebar_minimize_button_focus = string.format("%s/.config/awesome/themes/%s/titlebar/min.svg", os.getenv("HOME"), "samurai")
+theme.titlebar_minimize_button_normal = string.format("%s/.config/awesome/themes/%s/titlebar/normal.svg", os.getenv("HOME"), "subtle-gray")
+theme.titlebar_minimize_button_focus = string.format("%s/.config/awesome/themes/%s/titlebar/min.svg", os.getenv("HOME"), "subtle-gray")
 
-theme.titlebar_maximized_button_normal_inactive = string.format("%s/.config/awesome/themes/%s/titlebar/normal.svg", os.getenv("HOME"), "samurai")
-theme.titlebar_maximized_button_focus_inactive = string.format("%s/.config/awesome/themes/%s/titlebar/max.svg", os.getenv("HOME"), "samurai")
+theme.titlebar_maximized_button_normal_inactive = string.format("%s/.config/awesome/themes/%s/titlebar/normal.svg", os.getenv("HOME"), "subtle-gray")
+theme.titlebar_maximized_button_focus_inactive = string.format("%s/.config/awesome/themes/%s/titlebar/max.svg", os.getenv("HOME"), "subtle-gray")
 
-theme.titlebar_maximized_button_normal_active = string.format("%s/.config/awesome/themes/%s/titlebar/normal.svg", os.getenv("HOME"), "samurai")
-theme.titlebar_maximized_button_focus_active = string.format("%s/.config/awesome/themes/%s/titlebar/max.svg", os.getenv("HOME"), "samurai")
+theme.titlebar_maximized_button_normal_active = string.format("%s/.config/awesome/themes/%s/titlebar/normal.svg", os.getenv("HOME"), "subtle-gray")
+theme.titlebar_maximized_button_focus_active = string.format("%s/.config/awesome/themes/%s/titlebar/max.svg", os.getenv("HOME"), "subtle-gray")
 
-theme.titlebar_close_button_normal = string.format("%s/.config/awesome/themes/%s/titlebar/normal.svg", os.getenv("HOME"), "samurai")
-theme.titlebar_close_button_focus = string.format("%s/.config/awesome/themes/%s/titlebar/close.svg", os.getenv("HOME"), "samurai")
+theme.titlebar_close_button_normal = string.format("%s/.config/awesome/themes/%s/titlebar/normal.svg", os.getenv("HOME"), "subtle-gray")
+theme.titlebar_close_button_focus = string.format("%s/.config/awesome/themes/%s/titlebar/close.svg", os.getenv("HOME"), "subtle-gray")
 
 -- Wallpaper
-theme.wallpaper = string.format("%s/.config/awesome/themes/%s/wallpaper.png", os.getenv("HOME"), "samurai")
+theme.wallpaper = string.format("%s/.config/awesome/themes/%s/wallpaper.png", os.getenv("HOME"), "subtle-gray")
 
 -- Icons
 theme.icon_theme = nil
