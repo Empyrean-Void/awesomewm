@@ -6,9 +6,11 @@ Dotfiles for the Awesome window manager
 
 Core functionality is configured in `rc.lua`, appearance is defined by a theme.
 
-There are two default themes:
+There are three default themes:
 
 - Subtle Gray (safe for work)
+
+- Subtle Green (sketchy)
 
 - Subtle Blue (not safe for work)
 
