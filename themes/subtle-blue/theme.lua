@@ -11,14 +11,14 @@ theme.name = "subtle-blue"
 theme.font = "Hack Nerd Font 9"
 
 -- Colors
-theme.bg_normal = "#262626"
+theme.bg_normal = "#292929"
 theme.fg_normal = "#abb2bf"
 
-theme.bg_focus = "#262626"
+theme.bg_focus = "#292929"
 theme.fg_focus = "#abb2bf"
 
 theme.bg_urgent = "#e06c75"
-theme.fg_urgent = "#262626"
+theme.fg_urgent = "#292929"
 
 theme.bg_minimize = "#3a3a3a"
 theme.fg_minimize = "#abb2bf"
