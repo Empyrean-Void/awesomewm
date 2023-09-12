@@ -1,4 +1,4 @@
--- Subtle Gray theme --
+-- Subtle Blue theme --
 
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
@@ -6,7 +6,7 @@ local dpi = xresources.apply_dpi
 
 local theme = {}
 
-theme.name = "subtle-gray"
+theme.name = "subtle-blue"
 
 theme.font = "Hack Nerd Font 9"
 
@@ -23,7 +23,7 @@ theme.fg_urgent = "#262626"
 theme.bg_minimize = "#3a3a3a"
 theme.fg_minimize = "#abb2bf"
 
-theme.bg_accent = "#937aa3"
+theme.bg_accent = "#577784"
 
 -- System tray
 theme.bg_systray = theme.bg_normal

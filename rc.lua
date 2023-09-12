@@ -201,6 +201,11 @@ globalkeys = gears.table.join(
 		awful.spawn.with_shell("dmenu_run")
 		end, { description = "run prompt", group = "launcher" }),
 
+	-- Lock screen
+	awful.key({ modkey }, "x", function()
+		awful.spwan.with_shell("betterlockscreen -l")
+		end, { description = "Lock screen", group = "awesome" }),
+
 	-- Web browser
 	awful.key({ modkey }, "w", function()
 		awful.spawn.with_shell("chromium")
