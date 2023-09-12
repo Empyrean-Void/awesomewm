@@ -16,6 +16,16 @@ There are three default themes:
 
 To create a theme simply copy and rename an existing theme, and modify it as you see fit.
 
+## Screenshots
+
+- Subtle Gray
+
+<img src="screenshots/subtle-gray.png" width="640" height="360">
+
+<img src="screenshots/subtle-green.png" width="640" height="360">
+
+<img src="screenshots/subtle-blue.png" width="640" height="360">
+
 ## To Do
 
 - [ ] Split up config
