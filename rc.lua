@@ -20,7 +20,7 @@ require("awful.hotkeys_popup.keys")
 
 -- Custom modules
 titlebar = require("ui.titlebar")
-wibar = require("ui.wibar")
+wibar = require("ui.bar.wibar")
 
 -- Auto start
 awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
