@@ -41,27 +41,6 @@ local tasklist_buttons = gears.table.join(
         awful.client.focus.byidx(-1)
     end))
 local function create_wibar(s)
-    -- Create a promptbox for each screen
-    local mypromptbox = awful.widget.prompt()
-
-    -- Create an imagebox widget which will contain an icon indicating which layout we're using.
-    -- We need one layoutbox per screen.
-    local mylayoutbox = awful.widget.layoutbox(s)
-    mylayoutbox:buttons(gears.table.join(
-        awful.button({}, 1, function()
-            awful.layout.inc(1)
-        end),
-        awful.button({}, 3, function()
-            awful.layout.inc(-1)
-        end),
-        awful.button({}, 4, function()
-            awful.layout.inc(1)
-        end),
-        awful.button({}, 5, function()
-            awful.layout.inc(-1)
-        end)
-    ))
-
     -- Create a taglist widget
     local mytaglist = awful.widget.taglist({
         screen = s,
@@ -85,7 +64,6 @@ local function create_wibar(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             mytaglist,
-            mypromptbox,
         },
         mytasklist, -- Middle widget
         { -- Right widgets
