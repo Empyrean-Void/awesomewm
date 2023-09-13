@@ -164,6 +164,16 @@ globalkeys = gears.table.join(
 		awful.spawn.with_shell("rofi -show window")
 		end, { description = "window list", group = "launcher" }),
 
+	-- Power menu
+	awful.key({ modkey }, "p", function()
+		awful.spawn.with_shell("/home/void/.config/awesome/scripts/power-menu.sh")
+		end, { description = "power menu", group = "launcher" }),
+
+	-- Display menu
+	awful.key({ modkey }, "d", function()
+		awful.spawn.with_shell("/home/void/.config/awesome/scripts/display-menu.sh")
+		end, { description = "list displays", group = "launcher" }),
+
 	-- Web browser
 	awful.key({ modkey }, "w", function()
 		awful.spawn.with_shell("chromium")
