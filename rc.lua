@@ -156,8 +156,13 @@ root.buttons(gears.table.join(
 globalkeys = gears.table.join(
 	-- Prompt
 	awful.key({ modkey }, "r", function()
-		awful.spawn.with_shell("dmenu_run")
+		awful.spawn.with_shell("rofi -show drun")
 		end, { description = "run prompt", group = "launcher" }),
+
+	-- Overview
+	awful.key({ modkey, "Shift", }, "w", function()
+		awful.spawn.with_shell("rofi -show window")
+		end, { description = "window list", group = "launcher" }),
 
 	-- Web browser
 	awful.key({ modkey }, "w", function()
