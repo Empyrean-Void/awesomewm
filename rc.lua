@@ -19,7 +19,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys")
 
 -- Custom modules
-titlebar = require("ui.titlebar")
+titlebar = require("ui.decorations")
 wibar = require("ui.bar.wibar")
 
 -- Auto start
