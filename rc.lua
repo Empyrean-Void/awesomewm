@@ -23,6 +23,7 @@ titlebar = require("ui.titlebar")
 wibar = require("ui.wibar")
 
 -- Auto start
+awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 awful.spawn.with_shell("~/.config/awesome/scripts/display-layout.sh")
 awful.spawn.with_shell("picom")
 
