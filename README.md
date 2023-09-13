@@ -2,6 +2,11 @@
 
 Dotfiles for the Awesome window manager
 
+## Roadmap
+
+- [ ] Improve wibar
+- [ ] Make configuration modular
+
 ## Customization
 
 Core functionality is configured in `rc.lua`, appearance is defined by a theme.
@@ -29,7 +34,3 @@ To create a theme simply copy and rename an existing theme, and modify it as you
 - Subtle Blue
 
 <img src="screenshots/subtle-blue.png" width="640" height="360">
-
-## To Do
-
-- [ ] Split up config
