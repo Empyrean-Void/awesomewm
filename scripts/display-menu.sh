@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # Options
-dual="Dual displays"
-external="External display"
-laptop="Laptop display"
+dual="󰍺 Dual displays"
+external="󰍹 External display"
+laptop="󰌢 Laptop display"
 
 rofi_cmd() {
    rofi -dmenu \

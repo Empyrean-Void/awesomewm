@@ -169,6 +169,11 @@ globalkeys = gears.table.join(
 		awful.spawn.with_shell("/home/void/.config/awesome/scripts/power-menu.sh")
 		end, { description = "power menu", group = "launcher" }),
 
+	-- Power save menu
+	awful.key({ modkey , "Shift",}, "p", function()
+		awful.spawn.with_shell("/home/void/.config/awesome/scripts/power-save.sh")
+		end, { description = "power saving", group = "launcher" }),
+
 	-- Display menu
 	awful.key({ modkey }, "d", function()
 		awful.spawn.with_shell("/home/void/.config/awesome/scripts/display-menu.sh")
@@ -463,17 +468,6 @@ end)
 -- Add a titlebar if titlebars_enabled is set to true in the rules.
 client.connect_signal("request::titlebars", function(c)
 	-- buttons for the titlebar
-	local buttons = gears.table.join(
-	awful.button({}, 1, function()
-			c:emit_signal("request::activate", "titlebar", { raise = true })
-			awful.mouse.client.move(c)
-		end),
-	awful.button({}, 3, function()
-			c:emit_signal("request::activate", "titlebar", { raise = true })
-			awful.mouse.client.resize(c)
-		end)
-	)
-
 	titlebar.create_titlebar(c)
 end)
 
