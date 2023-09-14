@@ -23,7 +23,7 @@ theme.fg_urgent = "#292929"
 theme.bg_minimize = "#3a3a3a"
 theme.fg_minimize = "#abb2bf"
 
-theme.bg_accent = "#98c379"
+theme.bg_accent = "#8ba678"
 
 -- System tray
 theme.bg_systray = theme.bg_normal
