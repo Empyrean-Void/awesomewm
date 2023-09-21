@@ -39,8 +39,8 @@ theme.useless_gap = dpi(3)
 -- Taglist
 local taglist_square_size = dpi(4)
 
-theme.taglist_bg_focus = theme.bg_accent
-theme.taglist_fg_focus = theme.bg_normal
+theme.taglist_bg_focus = theme.bg_normal
+theme.taglist_fg_focus = theme.fg_normal
 
 theme.taglist_bg_normal = theme.bg_normal
 theme.taglist_fg_normal = theme.fg_normal
@@ -61,8 +61,8 @@ theme.notification_height = 50
 theme.notification_border_width = dpi(2)
 
 -- Tasklist
-theme.tasklist_bg_focus = theme.bg_accent
-theme.tasklist_fg_focus = theme.bg_normal
+theme.tasklist_bg_focus = theme.bg_normal
+theme.tasklist_fg_focus = theme.fg_normal
 
 theme.tasklist_bg_normal = theme.bg_normal
 theme.tasklist_fg_normal = theme.fg_normal
@@ -70,8 +70,8 @@ theme.tasklist_fg_normal = theme.fg_normal
 theme.tasklist_bg_minimize = theme.bg_minimize
 theme.tasklist_fg_minimize = theme.fg_normal
 
-theme.tasklist_bg_urgent = theme.bg_urgent
-theme.tasklist_fg_urgent = theme.bg_normal
+theme.tasklist_bg_urgent = theme.bg_normal
+theme.tasklist_fg_urgent = theme.fg_normal
 
 theme.tasklist_spacing = dpi(2)
 
