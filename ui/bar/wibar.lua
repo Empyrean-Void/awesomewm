@@ -1,6 +1,7 @@
 local gears = require("gears")
 local awful = require("awful")
 local wibox = require("wibox")
+local battery_widget = require("ui.bar.widgets.battery")
 
 local taglist_buttons = gears.table.join(
     awful.button({ }, 1, function(t) t:view_only() end),
@@ -69,6 +70,7 @@ local function create_wibar(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
+            battery_widget,
             mytextclock,
         },
     })

@@ -8,7 +8,7 @@ local theme = {}
 
 theme.name = "subtle-gray"
 
-theme.font = "Hack Nerd Font 9"
+theme.font = "BlexMonoNerdFont 9"
 
 -- Colors
 theme.bg_normal = "#262626"
