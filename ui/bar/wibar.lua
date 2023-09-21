@@ -88,6 +88,7 @@ local function create_wibar(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
+            spacer,
             mytaglist,
         },
         mytasklist, -- Middle widget
