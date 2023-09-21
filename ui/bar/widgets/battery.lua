@@ -13,7 +13,7 @@ local function update_battery_widget()
         font = theme.font
         battery_percentage = stdout
         color = "#8ba678"
-        battery.markup = "<span font=\"" .. font .. "\" color=\"" .. color .. "\"> Bat: " .. battery_percentage .. "%</span>"
+        battery.markup = "<span font=\"" .. font .. "\" color=\"" .. color .. "\">󰁹 " .. battery_percentage .. "%</span>"
     end)
 end
 

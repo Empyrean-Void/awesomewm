@@ -47,6 +47,14 @@ local function create_wibar(s)
         screen = s,
         filter = awful.widget.taglist.filter.all,
         buttons = taglist_buttons,
+        style = {
+            shape_border_width = 2,
+            shape_border_color_focus = '#937aa3',
+            shape_border_color = '#262626',
+            shape_border_color_urgent = '#e06c75',
+
+            shape = gears.shape.rounded_rect,
+        },
     })
 
     -- Create a tasklist widget
@@ -54,7 +62,23 @@ local function create_wibar(s)
         screen = s,
         filter = awful.widget.tasklist.filter.currenttags,
         buttons = tasklist_buttons,
+        style = {
+            shape_border_width = 2,
+            shape_border_color_focus = '#937aa3',
+            shape_border_color = '#6c6c6c',
+            shape_border_color_minimized = '#3a3a3a',
+            shape_border_color_urgent = '#e06c75',
+
+            shape = gears.shape.rounded_bar,
+            align = "center",
+        },
     })
+
+    -- Create a textclock widget
+    local clock_widget = wibox.widget.textclock("󰃰 %H:%M %b, %d")
+
+    -- Create a separator widget (spacer)
+    local spacer = wibox.widget.textbox(" ")
 
     -- Create the wibox
     local mywibox = awful.wibar({ position = "top", screen = s })
@@ -70,8 +94,11 @@ local function create_wibar(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
+            spacer,
             battery_widget,
-            mytextclock,
+            spacer,
+            clock_widget,
+            spacer,
         },
     })
 end
