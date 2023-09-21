@@ -1,6 +1,7 @@
 local gears = require("gears")
 local awful = require("awful")
 local wibox = require("wibox")
+local theme = require("themes.subtle-gray.theme")
 local battery_widget = require("ui.bar.widgets.battery")
 
 local taglist_buttons = gears.table.join(
@@ -49,9 +50,9 @@ local function create_wibar(s)
         buttons = taglist_buttons,
         style = {
             shape_border_width = 2,
-            shape_border_color_focus = '#937aa3',
-            shape_border_color = '#262626',
-            shape_border_color_urgent = '#e06c75',
+            shape_border_color_focus = theme.bg_accent,
+            shape_border_color = theme.bg_normal,
+            shape_border_color_urgent = theme.bg_urgent,
 
             shape = gears.shape.rounded_rect,
         },
@@ -64,10 +65,10 @@ local function create_wibar(s)
         buttons = tasklist_buttons,
         style = {
             shape_border_width = 2,
-            shape_border_color_focus = '#937aa3',
+            shape_border_color_focus = theme.bg_accent,
             shape_border_color = '#6c6c6c',
-            shape_border_color_minimized = '#3a3a3a',
-            shape_border_color_urgent = '#e06c75',
+            shape_border_color_minimized = theme.bg_minimize,
+            shape_border_color_urgent = theme.bg_urgent,
 
             shape = gears.shape.rounded_bar,
             align = "center",
@@ -75,7 +76,7 @@ local function create_wibar(s)
     })
 
     -- Create a textclock widget
-    local clock_widget = wibox.widget.textclock("󰃰 %H:%M %b, %d")
+    local clock_widget = wibox.widget.textclock("󰃰 %H:%M %b %d")
 
     -- Create a separator widget (spacer)
     local spacer = wibox.widget.textbox(" ")
