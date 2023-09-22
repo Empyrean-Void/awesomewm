@@ -195,6 +195,23 @@ globalkeys = gears.table.join(
 		awful.spawn.with_shell("pactl set-sink-volume 0 +5%")
 		end, { description = "raise volume", group = "volume" }),
 
+	-- Media control
+	awful.key({}, "XF86AudioPlay", function()
+		awful.spawn.with_shell("playerctl play-pause")
+		end, { description = "play", group = "media" }),
+
+	awful.key({}, "XF86AudioPause", function()
+		awful.spawn.with_shell("playerctl play-pause")
+		end, { description = "play", group = "media" }),
+
+	awful.key({}, "XF86AudioNext", function()
+		awful.spawn.with_shell("playerctl next")
+		end, { description = "next", group = "media" }),
+
+	awful.key({}, "XF86AudioPrevious", function()
+		awful.spawn.with_shell("playerctl previous")
+		end, { description = "previous", group = "media" }),
+
 	-- Brightness
 	awful.key({}, "XF86MonBrightnessDown", function()
 		awful.spawn.with_shell("brightnessctl set 5%-")
