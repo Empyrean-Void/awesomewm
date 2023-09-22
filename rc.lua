@@ -202,7 +202,7 @@ globalkeys = gears.table.join(
 
 	awful.key({}, "XF86AudioPause", function()
 		awful.spawn.with_shell("playerctl play-pause")
-		end, { description = "play", group = "media" }),
+		end, { description = "pause", group = "media" }),
 
 	awful.key({}, "XF86AudioNext", function()
 		awful.spawn.with_shell("playerctl next")
