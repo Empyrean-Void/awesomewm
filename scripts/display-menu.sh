@@ -7,7 +7,7 @@ laptop="󰌢 Laptop display"
 
 rofi_cmd() {
    rofi -dmenu \
-      -p "Select display:"
+      -i -p "Select display:"
 }
 
 run_rofi() {

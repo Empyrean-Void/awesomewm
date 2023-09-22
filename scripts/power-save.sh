@@ -7,7 +7,7 @@ performance='󰓅 Performance'
 
 rofi_cmd() {
    rofi -dmenu \
-      -p "Power saving:"
+      -i -p "Power saving:"
 }
 
 run_rofi() {
