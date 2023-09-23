@@ -1,4 +1,4 @@
--- Subtle Blue theme --
+-- Subtle Gray theme --
 
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
@@ -6,24 +6,24 @@ local dpi = xresources.apply_dpi
 
 local theme = {}
 
-theme.name = "subtle-blue"
+theme.name = "forest"
 
-theme.font = "Hack Nerd Font 9"
+theme.font = "BlexMonoNerdFont 9"
 
 -- Colors
-theme.bg_normal = "#292929"
+theme.bg_normal = "#262626"
 theme.fg_normal = "#abb2bf"
 
-theme.bg_focus = "#292929"
+theme.bg_focus = "#262626dd"
 theme.fg_focus = "#abb2bf"
 
-theme.bg_urgent = "#e06c75"
-theme.fg_urgent = "#292929"
+theme.bg_urgent = "#262626dd"
+theme.fg_urgent = "#abb2bf"
 
 theme.bg_minimize = "#3a3a3a"
 theme.fg_minimize = "#abb2bf"
 
-theme.bg_accent = "#577784"
+theme.bg_accent = "#8ba678"
 
 -- System tray
 theme.bg_systray = theme.bg_normal
@@ -39,8 +39,8 @@ theme.useless_gap = dpi(3)
 -- Taglist
 local taglist_square_size = dpi(4)
 
-theme.taglist_bg_focus = theme.bg_accent
-theme.taglist_fg_focus = theme.bg_normal
+theme.taglist_bg_focus = theme.bg_normal
+theme.taglist_fg_focus = theme.fg_normal
 
 theme.taglist_bg_normal = theme.bg_normal
 theme.taglist_fg_normal = theme.fg_normal
@@ -61,8 +61,8 @@ theme.notification_height = 50
 theme.notification_border_width = dpi(2)
 
 -- Tasklist
-theme.tasklist_bg_focus = theme.bg_accent
-theme.tasklist_fg_focus = theme.bg_normal
+theme.tasklist_bg_focus = theme.bg_normal
+theme.tasklist_fg_focus = theme.fg_normal
 
 theme.tasklist_bg_normal = theme.bg_normal
 theme.tasklist_fg_normal = theme.fg_normal
@@ -70,8 +70,8 @@ theme.tasklist_fg_normal = theme.fg_normal
 theme.tasklist_bg_minimize = theme.bg_minimize
 theme.tasklist_fg_minimize = theme.fg_normal
 
-theme.tasklist_bg_urgent = theme.bg_urgent
-theme.tasklist_fg_urgent = theme.bg_normal
+theme.tasklist_bg_urgent = theme.bg_normal
+theme.tasklist_fg_urgent = theme.fg_normal
 
 theme.tasklist_spacing = dpi(2)
 

@@ -1,7 +1,7 @@
 local gears = require("gears")
 local awful = require("awful")
 local wibox = require("wibox")
-local theme = require("themes.subtle-gray.theme")
+local theme = require("themes.forest.theme")
 local battery_widget = require("ui.bar.widgets.battery")
 
 local taglist_buttons = gears.table.join(
@@ -82,7 +82,15 @@ local function create_wibar(s)
     local spacer = wibox.widget.textbox(" ")
 
     -- Create the wibox
-    local mywibox = awful.wibar({ position = "top", screen = s })
+    local mywibox = awful.wibar({
+        position = "bottom",
+        screen = s,
+        width = 1900,
+        opacity = 0.85,
+        style = {
+            shape = gears.shape.rounded_bar,
+        }
+    })
 
     -- Add widgets to the wibox
     mywibox:setup({
