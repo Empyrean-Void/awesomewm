@@ -8,16 +8,16 @@ local theme = {}
 
 theme.name = "forest"
 
-theme.font = "BlexMonoNerdFont 9"
+theme.font = "BlexMonoNerdFont 10"
 
 -- Colors
-theme.bg_normal = "#262626"
+theme.bg_normal = "#262626d9"
 theme.fg_normal = "#abb2bf"
 
-theme.bg_focus = "#262626dd"
+theme.bg_focus = "#262626d9"
 theme.fg_focus = "#abb2bf"
 
-theme.bg_urgent = "#262626dd"
+theme.bg_urgent = "#262626"
 theme.fg_urgent = "#abb2bf"
 
 theme.bg_minimize = "#3a3a3a"
@@ -45,8 +45,8 @@ theme.taglist_fg_focus = theme.fg_normal
 theme.taglist_bg_normal = theme.bg_normal
 theme.taglist_fg_normal = theme.fg_normal
 
-theme.taglist_bg_urgent = theme.bg_urgent
-theme.taglist_fg_urgent = theme.bg_normal
+theme.taglist_bg_urgent = theme.bg_normal
+theme.taglist_fg_urgent = theme.fg_normal
 
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(taglist_square_size, theme.taglist_fg_focus)
 theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_size, theme.fg_normal)
@@ -54,11 +54,10 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_
 -- Notifications
 theme.notification_bg = theme.bg_normal
 theme.notification_fg = theme.fg_normal
-theme.notification_border_color = theme.bg_accent
 
 theme.notification_width = 200
 theme.notification_height = 50
-theme.notification_border_width = dpi(2)
+theme.notification_opacity = 0.85
 
 -- Tasklist
 theme.tasklist_bg_focus = theme.bg_normal
@@ -77,7 +76,7 @@ theme.tasklist_spacing = dpi(2)
 
 theme.tasklist_disable_icon = true
 
--- Titlebar buttons
+-- Titlebar
 theme.titlebar_minimize_button_normal = string.format("%s/.config/awesome/themes/%s/titlebar/normal.svg", os.getenv("HOME"), theme.name)
 theme.titlebar_minimize_button_focus = string.format("%s/.config/awesome/themes/%s/titlebar/min.svg", os.getenv("HOME"), theme.name)
 
@@ -92,9 +91,6 @@ theme.titlebar_close_button_focus = string.format("%s/.config/awesome/themes/%s/
 
 -- Wallpaper
 theme.wallpaper = string.format("%s/.config/awesome/themes/%s/wallpaper.png", os.getenv("HOME"), theme.name)
-
--- Icons
-theme.icon_theme = nil
 
 return theme
 

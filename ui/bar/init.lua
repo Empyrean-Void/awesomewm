@@ -1,8 +1,10 @@
 local gears = require("gears")
 local awful = require("awful")
 local wibox = require("wibox")
-local theme = require("themes.forest.theme")
+local theme = require("themes.forest")
 local battery_widget = require("ui.bar.widgets.battery")
+local wifi_widget = require("ui.bar.widgets.wifi")
+local date_widget = require("ui.bar.widgets.date")
 
 local taglist_buttons = gears.table.join(
     awful.button({ }, 1, function(t) t:view_only() end),
@@ -76,7 +78,6 @@ local function create_wibar(s)
     })
 
     -- Create a textclock widget
-    local clock_widget = wibox.widget.textclock("󰃰 %H:%M %b %d")
 
     -- Create a separator widget (spacer)
     local spacer = wibox.widget.textbox(" ")
@@ -106,9 +107,10 @@ local function create_wibar(s)
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
             spacer,
+            wifi_widget,
             battery_widget,
             spacer,
-            clock_widget,
+            date_widget,
             spacer,
         },
     })

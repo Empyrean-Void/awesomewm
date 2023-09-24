@@ -19,8 +19,8 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys")
 
 -- Custom modules
-titlebar = require("ui.decorations")
-wibar = require("ui.bar.wibar")
+titlebar = require("ui.titlebar")
+wibar = require("ui.bar")
 
 -- Auto start
 awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
@@ -61,7 +61,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "forest")
+local theme_path = string.format("%s/.config/awesome/themes/%s/init.lua", os.getenv("HOME"), "forest")
 beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
@@ -154,7 +154,7 @@ globalkeys = gears.table.join(
 
 	-- Overview
 	awful.key({ modkey, "Shift", }, "w", function()
-		awful.spawn.with_shell("rofi -show window")
+		awful.spawn.with_shell("/home/void/.config/awesome/scripts/wifi-menu.sh")
 		end, { description = "window list", group = "launcher" }),
 
 	-- Power menu

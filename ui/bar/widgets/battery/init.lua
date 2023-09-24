@@ -1,6 +1,6 @@
 local wibox = require("wibox")
 local awful = require("awful")
-local theme = require("themes.subtle-gray.theme")
+local theme = require("themes.forest")
 
 -- Battery widget
 local battery = wibox.widget {
@@ -12,7 +12,7 @@ local function update_battery_widget()
     awful.spawn.easy_async("/home/void/.config/awesome/scripts/battery.sh", function(stdout)
         font = theme.font
         battery_percentage = stdout
-        color = "#8ba678"
+        color = theme.fg_normal
         battery.markup = "<span font=\"" .. font .. "\" color=\"" .. color .. "\">󰁹 " .. battery_percentage .. "%</span>"
     end)
 end
