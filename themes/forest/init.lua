@@ -1,4 +1,4 @@
--- Subtle Gray theme --
+-- Forest theme --
 
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
