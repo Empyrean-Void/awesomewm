@@ -4,29 +4,27 @@ Dotfiles for the Awesome window manager
 
 ## Roadmap
 
-- [ ] Improve wibar
+- [X] Improve wibar
 - [ ] Make configuration modular
 
 ## Customization
 
 Core functionality is configured in `rc.lua`, appearance is defined by a theme.
 
-There are three default themes:
+There are two themes:
 
-- Subtle Gray (safe for work)
+- Forest
 
-- Subtle Green (sketchy)
-
-- Subtle Blue (not safe for work)
+- Subtle Gray
 
 To create a theme simply copy and rename an existing theme, and modify it as you see fit.
 
 ## Screenshots
 
+- Forest
+
+<img src="screenshots/forest.png" width="640" height="360">
+
 - Subtle Gray
 
 <img src="screenshots/subtle-gray.png" width="640" height="360">
-
-- Subtle Green
-
-<img src="screenshots/subtle-green.png" width="640" height="360">
