@@ -4,40 +4,51 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 modkey = "Mod4"
 
 globalkeys = gears.table.join(
-	-- Prompt
-	awful.key({ modkey }, "r", function()
-		awful.spawn.with_shell("rofi -show drun")
-		end, { description = "run prompt", group = "launcher" }),
+	-- APPLICATIONS --
 
-	-- Overview
-	awful.key({ modkey, "Shift", }, "w", function()
-		awful.spawn.with_shell("/home/void/.config/awesome/scripts/wifi-menu.sh")
-		end, { description = "window list", group = "launcher" }),
+	-- Terminal
+	awful.key({ modkey }, "Return", function()
+		awful.spawn(terminal)
+		end, { description = "open terminal", group = "applications" }),
 
-	-- Power menu
-	awful.key({ modkey }, "p", function()
-		awful.spawn.with_shell("/home/void/.config/awesome/scripts/power-menu.sh")
-		end, { description = "power menu", group = "launcher" }),
-
-	-- Power save menu
-	awful.key({ modkey , "Shift",}, "p", function()
-		awful.spawn.with_shell("/home/void/.config/awesome/scripts/power-save.sh")
-		end, { description = "power saving", group = "launcher" }),
-
-	-- Display menu
-	awful.key({ modkey }, "d", function()
-		awful.spawn.with_shell("/home/void/.config/awesome/scripts/display-menu.sh")
-		end, { description = "list displays", group = "launcher" }),
+	-- File manager
+	awful.key({ modkey, "Shift", }, "f", function()
+		awful.spawn.with_shell(string.format(terminal .. " -e xplr"))
+		end, { description = "open file manager", group = "applications" }),
 
 	-- Web browser
 	awful.key({ modkey }, "w", function()
 		awful.spawn.with_shell("chromium")
 		end, { description = "open web browser", group = "applications" }),
 
-	-- File manager
-	awful.key({ modkey, "Shift", }, "f", function()
-		awful.spawn.with_shell("thunar")
-		end, { description = "open file manager", group = "applications" }),
+	-- MENUS --
+
+	-- Applications
+	awful.key({ modkey }, "r", function()
+		awful.spawn.with_shell("rofi -show drun")
+		end, { description = "search applications", group = "launcher" }),
+
+	-- Displays
+	awful.key({ modkey }, "d", function()
+		awful.spawn.with_shell("/home/void/.config/awesome/scripts/display-menu.sh")
+		end, { description = "select displays", group = "launcher" }),
+
+	-- Power
+	awful.key({ modkey }, "p", function()
+		awful.spawn.with_shell("/home/void/.config/awesome/scripts/power-menu.sh")
+		end, { description = "open power menu", group = "launcher" }),
+
+	-- Power saving
+	awful.key({ modkey , "Shift",}, "p", function()
+		awful.spawn.with_shell("/home/void/.config/awesome/scripts/power-save.sh")
+		end, { description = "select power saving mode", group = "launcher" }),
+
+	-- Wifi
+	awful.key({ modkey, "Shift", }, "w", function()
+		awful.spawn.with_shell("/home/void/.config/awesome/scripts/wifi-menu.sh")
+		end, { description = "show wifi networks", group = "launcher" }),
+
+	-- MEDIA CONTROL --
 
 	-- Volume
 	awful.key({}, "XF86AudioMute", function()
@@ -52,22 +63,22 @@ globalkeys = gears.table.join(
 		awful.spawn.with_shell("pactl set-sink-volume 0 +5%")
 		end, { description = "raise volume", group = "volume" }),
 
-	-- Media control
+	-- Media
 	awful.key({}, "XF86AudioPlay", function()
 		awful.spawn.with_shell("playerctl play-pause")
-		end, { description = "play", group = "media" }),
+		end, { description = "play track", group = "media" }),
 
 	awful.key({}, "XF86AudioPause", function()
 		awful.spawn.with_shell("playerctl play-pause")
-		end, { description = "pause", group = "media" }),
+		end, { description = "pause track", group = "media" }),
 
 	awful.key({}, "XF86AudioNext", function()
 		awful.spawn.with_shell("playerctl next")
-		end, { description = "next", group = "media" }),
+		end, { description = "next track", group = "media" }),
 
 	awful.key({}, "XF86AudioPrevious", function()
 		awful.spawn.with_shell("playerctl previous")
-		end, { description = "previous", group = "media" }),
+		end, { description = "previous track", group = "media" }),
 
 	-- Brightness
 	awful.key({}, "XF86MonBrightnessDown", function()
@@ -81,12 +92,13 @@ globalkeys = gears.table.join(
 	-- Screenshots
 	awful.key({ modkey }, "Print", function()
 		awful.spawn.with_shell("scrot ~/Pictures/screenshots/%Y-%m-%d-%H-%M-%S.png")
-		end, { description = "fullscreen", group = "screenshot" }),
+		end, { description = "take fullscreen screenshot", group = "screenshot" }),
 
 	awful.key({ modkey, "Shift" }, "Print", function()
 		awful.spawn.with_shell("scrot -s ~/Pictures/screenshots/%Y-%m-%d-%H-%M-%S.png")
-		end, { description = "select", group = "screenshot" }),
+		end, { description = "select screenshot area", group = "screenshot" }),
 
+	-- Builtin
 	awful.key({ modkey }, "s", hotkeys_popup.show_help, { description = "show help", group = "awesome" }),
 	awful.key({ modkey }, "Left", awful.tag.viewprev, { description = "view previous", group = "tag" }),
 	awful.key({ modkey }, "Right", awful.tag.viewnext, { description = "view next", group = "tag" }),
@@ -121,9 +133,6 @@ globalkeys = gears.table.join(
 		end, { description = "go back", group = "client" }),
 
 	-- Standard program
-	awful.key({ modkey }, "Return", function()
-		awful.spawn(terminal)
-		end, { description = "open a terminal", group = "launcher" }),
 	awful.key({ modkey, "Control" }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
 	awful.key({ modkey, "Shift" }, "q", awesome.quit, { description = "quit awesome", group = "awesome" }),
 
