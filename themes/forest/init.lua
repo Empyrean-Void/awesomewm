@@ -39,6 +39,8 @@ theme.useless_gap = dpi(3)
 -- Taglist
 local taglist_square_size = dpi(4)
 
+theme.taglist_spacing = 2
+
 theme.taglist_bg_focus = theme.bg_normal
 theme.taglist_fg_focus = theme.fg_normal
 

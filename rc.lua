@@ -9,9 +9,9 @@ require("awful.autofocus")
 -- Widget and layout library
 -- Theme handling library
 local beautiful = require("beautiful")
+
 -- Notification library
 local naughty = require("naughty")
-local hotkeys_popup = require("awful.hotkeys_popup")
 
 -- Custom modules
 titlebar = require("ui.titlebar")
@@ -64,9 +64,6 @@ beautiful.init(theme_path)
 terminal = "alacritty"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
-
--- Default modkey.
-modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
@@ -145,9 +142,7 @@ awful.rules.rules = {
 }
 -- }}}
 
--- {{{ Signals
--- Signal function to execute when a new client appears.
-
+-- Signals
 client.connect_signal("property::floating", function(c)
     if not c.fullscreen then
         if c.floating then
@@ -186,4 +181,3 @@ end)
 client.connect_signal("unfocus", function(c)
 	c.border_color = beautiful.border_normal
 end)
--- }}}

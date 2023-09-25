@@ -53,7 +53,8 @@ local function create_wibar(s)
         style = {
             shape_border_width = 2,
             shape_border_color_focus = theme.bg_accent,
-            shape_border_color = theme.bg_normal,
+            shape_border_color = theme.bg_minimize,
+            shape_border_color_empty = theme.bg_normal,
             shape_border_color_urgent = theme.bg_urgent,
 
             shape = gears.shape.rounded_rect,
