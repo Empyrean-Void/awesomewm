@@ -22,6 +22,7 @@ globalkeys = require("keys")
 awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 awful.spawn.with_shell("~/.config/awesome/scripts/display-layout.sh")
 awful.spawn.with_shell("picom")
+awful.spawn.with_shell("xsettingsd")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
