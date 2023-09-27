@@ -1,0 +1,6 @@
+[lua]
+format = 'via [󰢱 $version](bold blue) '
+
+[c]
+format = 'via [ $version]($style)'
+detect_extensions = ["c", "h", "cc"]
