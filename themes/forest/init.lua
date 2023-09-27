@@ -17,13 +17,12 @@ theme.fg_normal = "#abb2bf"
 theme.bg_focus = "#262626d9"
 theme.fg_focus = "#abb2bf"
 
-theme.bg_urgent = "#262626d9"
-theme.fg_urgent = "#abb2bf"
-
 theme.bg_minimize = "#3a3a3a"
 theme.fg_minimize = "#abb2bf"
 
-theme.bg_accent = "#8ba678"
+theme.urgent = "#e06c75"
+
+theme.accent = "#8ba678"
 
 -- System tray
 theme.bg_systray = theme.bg_normal
@@ -39,16 +38,16 @@ theme.useless_gap = dpi(3)
 -- Taglist
 local taglist_square_size = dpi(4)
 
-theme.taglist_spacing = 2
+theme.taglist_spacing = 0
 
 theme.taglist_bg_focus = theme.bg_normal
-theme.taglist_fg_focus = theme.fg_normal
+theme.taglist_fg_focus = theme.accent
 
 theme.taglist_bg_normal = theme.bg_normal
 theme.taglist_fg_normal = theme.fg_normal
 
 theme.taglist_bg_urgent = theme.bg_normal
-theme.taglist_fg_urgent = theme.fg_normal
+theme.taglist_fg_urgent = theme.urgent
 
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(taglist_square_size, theme.taglist_fg_focus)
 theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_size, theme.fg_normal)

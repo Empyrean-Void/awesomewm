@@ -51,15 +51,6 @@ local function create_wibar(s)
         screen = s,
         filter = awful.widget.taglist.filter.all,
         buttons = taglist_buttons,
-        style = {
-            shape_border_width = 2,
-            shape_border_color_focus = theme.bg_accent,
-            shape_border_color = theme.bg_minimize,
-            shape_border_color_empty = theme.bg_normal,
-            shape_border_color_urgent = theme.bg_urgent,
-
-            shape = gears.shape.rounded_rect,
-        },
     })
 
     -- Create a tasklist widget
@@ -69,10 +60,10 @@ local function create_wibar(s)
         buttons = tasklist_buttons,
         style = {
             shape_border_width = 2,
-            shape_border_color_focus = theme.bg_accent,
+            shape_border_color_focus = theme.accent,
             shape_border_color = '#6c6c6c',
             shape_border_color_minimized = theme.bg_minimize,
-            shape_border_color_urgent = theme.bg_urgent,
+            shape_border_color_urgent = theme.urgent,
 
             shape = gears.shape.rounded_bar,
             align = "center",
@@ -102,8 +93,8 @@ local function create_wibar(s)
             layout = wibox.layout.fixed.horizontal,
             spacer,
             power_widget,
-            mytaglist,
             spacer,
+            mytaglist,
         },
         mytasklist, -- Middle widget
         { -- Right widgets

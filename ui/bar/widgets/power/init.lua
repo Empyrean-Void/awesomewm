@@ -7,7 +7,7 @@ local function power_button_left_click()
 end
 
 -- Create the power button widget
-local power_button = wibox.widget.textbox("⏻ ")  -- You can choose a different icon
+local power_button = wibox.widget.textbox('<span color="' .. theme.urgent .. '">⏻</span> ')  -- You can choose a different icon
 power_button:buttons(
     awful.button({}, 1, nil, function() power_button_left_click() end)
 )
