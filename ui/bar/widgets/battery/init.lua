@@ -2,18 +2,23 @@ local wibox = require("wibox")
 local awful = require("awful")
 local theme = require("themes.forest")
 
+local function battery_left_click()
+    awful.spawn.easy_async({"zsh", "-c", "~/.config/awesome/scripts/power-save.sh"})
+end
+
 -- Battery widget
-local battery = wibox.widget {
-    widget = wibox.widget.textbox,
-}
+local battery = wibox.widget.textbox("")
+
+battery:buttons(
+    awful.button({}, 1, nil, function() battery_left_click() end)
+)
 
 -- Function to update the battery widget
 local function update_battery_widget()
-    awful.spawn.easy_async("/home/void/.config/awesome/scripts/battery.sh", function(stdout)
-        font = theme.font
-        battery_percentage = stdout
-        color = theme.fg_normal
-        battery.markup = "<span font=\"" .. font .. "\" color=\"" .. color .. "\">󰁹 " .. battery_percentage .. "%</span>"
+    awful.spawn.easy_async({"bash", "-c", "/home/void/.config/awesome/scripts/battery.sh"}, function(stdout)
+        local battery_percentage = stdout
+        battery.text = "󰁹 " .. battery_percentage .. "%"
+        battery.font = theme.font
     end)
 end
 

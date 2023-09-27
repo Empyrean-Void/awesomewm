@@ -2,6 +2,7 @@ local gears = require("gears")
 local awful = require("awful")
 local wibox = require("wibox")
 local theme = require("themes.forest")
+local power_widget = require("ui.bar.widgets.power")
 local battery_widget = require("ui.bar.widgets.battery")
 local wifi_widget = require("ui.bar.widgets.wifi")
 local date_widget = require("ui.bar.widgets.date")
@@ -100,6 +101,7 @@ local function create_wibar(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             spacer,
+            power_widget,
             mytaglist,
             spacer,
         },

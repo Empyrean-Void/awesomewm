@@ -61,7 +61,7 @@ local theme_path = string.format("%s/.config/awesome/themes/%s/init.lua", os.get
 beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
+terminal = "wezterm"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 

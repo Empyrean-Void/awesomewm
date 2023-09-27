@@ -57,8 +57,12 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_
 theme.notification_bg = theme.bg_normal
 theme.notification_fg = theme.fg_normal
 
-theme.notification_width = 200
-theme.notification_height = 50
+theme.notification_width = 300
+theme.notification_height = 75
+
+theme.notification_max_width = 500
+theme.notification_max_height = 200
+
 theme.notification_opacity = 0.85
 
 -- Tasklist
