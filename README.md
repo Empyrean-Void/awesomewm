@@ -6,12 +6,15 @@ Dotfiles for the Awesome window manager
 
 - [X] Improve wibar
 - [ ] Make configuration modular
+- [ ] Native (lua based) menus
+- [ ] Install script
+- [ ] AUR package
 
 ## Customization
 
 Core functionality is configured in `rc.lua`, appearance is defined by a theme.
 
-There are two themes:
+Default themes:
 
 - Forest
 
