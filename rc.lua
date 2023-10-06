@@ -58,7 +58,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-local theme_path = string.format("%s/.config/awesome/themes/%s/init.lua", os.getenv("HOME"), "forest")
+local theme_path = string.format("%s/.config/awesome/themes/%s/init.lua", os.getenv("HOME"), "vscode")
 beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.

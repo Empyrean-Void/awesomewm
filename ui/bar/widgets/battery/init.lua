@@ -1,9 +1,9 @@
 local wibox = require("wibox")
 local awful = require("awful")
-local theme = require("themes.forest")
+local theme = require("themes.vscode")
 
 local function battery_left_click()
-    awful.spawn.easy_async({"zsh", "-c", "~/.config/awesome/scripts/power-save.sh"})
+    awful.spawn.easy_async({"bash", "-c", "~/.config/awesome/scripts/power-save.sh"})
 end
 
 -- Battery widget
@@ -15,9 +15,9 @@ battery:buttons(
 
 -- Function to update the battery widget
 local function update_battery_widget()
-    awful.spawn.easy_async({"bash", "-c", "/home/void/.config/awesome/scripts/battery.sh"}, function(stdout)
-        local battery_percentage = stdout
-        battery.text = "󰁹 " .. battery_percentage .. "%"
+    awful.spawn.easy_async({"bash", "-c", "/home/empyrean/.config/awesome/scripts/battery.sh"}, function(stdout)
+        local battery_percentage = stdout:gsub("\n", "")
+        battery.text = "󰁹 " .. battery_percentage
         battery.font = theme.font
     end)
 end
@@ -26,7 +26,7 @@ end
 update_battery_widget()
 
 -- Update the battery widget every 30 seconds (or your preferred interval)
-awful.widget.watch("/home/void/.config/awesome/scripts/battery.sh", 30, function(widget, stdout)
+awful.widget.watch("/home/empyrean/.config/awesome/scripts/battery.sh", 30, function(widget, stdout)
     update_battery_widget()
 end)
 

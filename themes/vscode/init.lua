@@ -1,4 +1,4 @@
--- Subtle Gray theme --
+-- Forest theme --
 
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
@@ -6,24 +6,23 @@ local dpi = xresources.apply_dpi
 
 local theme = {}
 
-theme.name = "subtle-gray"
+theme.name = "vscode"
 
-theme.font = "BlexMonoNerdFont 9"
+theme.font = "Iosevka Nerd Font 10"
 
 -- Colors
-theme.bg_normal = "#262626"
-theme.fg_normal = "#abb2bf"
+theme.bg_normal = "#1e1e1e"
+theme.fg_normal = "#cccccc"
 
-theme.bg_focus = "#262626"
-theme.fg_focus = "#abb2bf"
+theme.bg_focus = "#1e1e1e"
+theme.fg_focus = "#cccccc"
 
-theme.bg_urgent = "#e06c75"
-theme.fg_urgent = "#262626"
+theme.bg_minimize = "#598489"
+theme.fg_minimize = "#cccccc"
 
-theme.bg_minimize = "#3a3a3a"
-theme.fg_minimize = "#abb2bf"
+theme.urgent = "#e65029"
 
-theme.bg_accent = "#937aa3"
+theme.accent = "#009afb"
 
 -- System tray
 theme.bg_systray = theme.bg_normal
@@ -39,14 +38,16 @@ theme.useless_gap = dpi(3)
 -- Taglist
 local taglist_square_size = dpi(4)
 
+theme.taglist_spacing = 0
+
 theme.taglist_bg_focus = theme.bg_normal
-theme.taglist_fg_focus = theme.fg_normal
+theme.taglist_fg_focus = theme.accent
 
 theme.taglist_bg_normal = theme.bg_normal
 theme.taglist_fg_normal = theme.fg_normal
 
-theme.taglist_bg_urgent = theme.bg_urgent
-theme.taglist_fg_urgent = theme.bg_normal
+theme.taglist_bg_urgent = theme.bg_normal
+theme.taglist_fg_urgent = theme.urgent
 
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(taglist_square_size, theme.taglist_fg_focus)
 theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_size, theme.fg_normal)
@@ -54,11 +55,14 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_
 -- Notifications
 theme.notification_bg = theme.bg_normal
 theme.notification_fg = theme.fg_normal
-theme.notification_border_color = theme.bg_accent
 
-theme.notification_width = 200
-theme.notification_height = 50
-theme.notification_border_width = dpi(2)
+theme.notification_width = 300
+theme.notification_height = 75
+
+theme.notification_max_width = 500
+theme.notification_max_height = 200
+
+theme.notification_opacity = 0.85
 
 -- Tasklist
 theme.tasklist_bg_focus = theme.bg_normal
@@ -77,7 +81,7 @@ theme.tasklist_spacing = dpi(2)
 
 theme.tasklist_disable_icon = true
 
--- Titlebar buttons
+-- Titlebar
 theme.titlebar_minimize_button_normal = string.format("%s/.config/awesome/themes/%s/titlebar/normal.svg", os.getenv("HOME"), theme.name)
 theme.titlebar_minimize_button_focus = string.format("%s/.config/awesome/themes/%s/titlebar/min.svg", os.getenv("HOME"), theme.name)
 
@@ -92,9 +96,6 @@ theme.titlebar_close_button_focus = string.format("%s/.config/awesome/themes/%s/
 
 -- Wallpaper
 theme.wallpaper = string.format("%s/.config/awesome/themes/%s/wallpaper.png", os.getenv("HOME"), theme.name)
-
--- Icons
-theme.icon_theme = nil
 
 return theme
 

@@ -6,7 +6,7 @@ local connected = false
 local essid = 'N/A'
 
 local function wifi_left_click()
-    awful.spawn.easy_async({"zsh", "-c", "~/.config/awesome/scripts/wifi-menu.sh"})
+    awful.spawn.easy_async({"bash", "-c", "~/.config/awesome/scripts/wifi-menu.sh"})
 end
 
 local widget =
@@ -14,7 +14,7 @@ local widget =
     {
         id = 'icon',
         widget = wibox.widget.textbox,
-        font = 'BlexMonoNerdFont 11', -- Set the appropriate font and size here
+        font = 'Iosevka Nerd Font 11', -- Set the appropriate font and size here
         align = 'center',
     },
     layout = wibox.layout.align.horizontal,

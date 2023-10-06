@@ -1,7 +1,7 @@
-theme = require("themes.forest")
+theme = require("themes.vscode")
 
 local function power_button_left_click()
-    awful.spawn.easy_async({"zsh", "-c", "~/.config/awesome/scripts/power-menu.sh"}, function(stdout, stderr, exitreason, exitcode)
+    awful.spawn.easy_async({"bash", "-c", "~/.config/awesome/scripts/power-menu.sh"}, function(stdout, stderr, exitreason, exitcode)
         -- Handle the result of the script execution here if needed
     end)
 end

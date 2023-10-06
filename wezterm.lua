@@ -11,47 +11,49 @@ if wezterm.config_builder then
 end
 
 -- Font
-config.font = wezterm.font 'BlexMonoNerdFont'
+config.font = wezterm.font 'IosevkaNerdFontMono'
 config.font_size = 12
 
 -- Theme
-config.colors = {
-  background = '#262626',
-  foreground = '#abb2bf',
+config.color_scheme = 'Vs Code Dark+ (Gogh)'
 
-  cursor_bg = '#abb2bf',
-  cursor_fg = '#262626',
-
-  selection_bg = '#abb2bf',
-  selection_fg = '#262626',
-
-  split = '#3a3a3a',
-
-  ansi = {
-    '#262626',
-    '#e06c75',
-    '#8ba678',
-    '#e4c998',
-    '#76b2e3',
-    '#937aa3',
-    '#76a1b3',
-    '#abb2bf',
-  },
-
-  brights = {
-    '#262626',
-    '#e06c75',
-    '#8ba678',
-    '#e4c998',
-    '#76b2e3',
-    '#937aa3',
-    '#76a1b3',
-    '#abb2bf',
-  },
-}
+-- config.colors = {
+--   background = '#262626',
+--   foreground = '#abb2bf',
+--
+--   cursor_bg = '#abb2bf',
+--   cursor_fg = '#262626',
+--
+--   selection_bg = '#abb2bf',
+--   selection_fg = '#262626',
+--
+--   split = '#3a3a3a',
+--
+--   ansi = {
+--     '#262626',
+--     '#e06c75',
+--     '#8ba678',
+--     '#e4c998',
+--     '#76b2e3',
+--     '#937aa3',
+--     '#76a1b3',
+--     '#abb2bf',
+--   },
+--
+--   brights = {
+--     '#262626',
+--     '#e06c75',
+--     '#8ba678',
+--     '#e4c998',
+--     '#76b2e3',
+--     '#937aa3',
+--     '#76a1b3',
+--     '#abb2bf',
+--   },
+-- }
 
 -- Opacity
-config.window_background_opacity = 0.85
+config.window_background_opacity = 1.0
 
 -- Tab bar
 config.enable_tab_bar = false

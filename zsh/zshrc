@@ -4,7 +4,7 @@ unsetopt beep notify
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/void/.zshrc'
+zstyle :compinstall filename '/home/empyrean/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -14,12 +14,10 @@ compinit
 autoload -Uz promptinit
 promptinit
 prompt redhat
-
-# Syntax #
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Exports #
-source /home/void/.config/awesome/zsh/zshenv
+source /home/empyrean/.config/awesome/zsh/zshenv
 
 # Aliases #
 
@@ -41,6 +39,3 @@ alias gpl="git pull"
 
 # Top
 alias top="btop"
-
-# pfetch
-eval "$(starship init zsh)"

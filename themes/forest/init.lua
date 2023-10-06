@@ -8,7 +8,7 @@ local theme = {}
 
 theme.name = "forest"
 
-theme.font = "BlexMonoNerdFont 10"
+theme.font = "Iosevka Nerd Font 10"
 
 -- Colors
 theme.bg_normal = "#262626d9"

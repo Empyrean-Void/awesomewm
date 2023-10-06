@@ -18,7 +18,7 @@ globalkeys = gears.table.join(
 
 	-- Web browser
 	awful.key({ modkey }, "w", function()
-		awful.spawn.with_shell("chromium")
+		awful.spawn.with_shell("firefox")
 		end, { description = "open web browser", group = "applications" }),
 
 	-- MENUS --
@@ -30,22 +30,22 @@ globalkeys = gears.table.join(
 
 	-- Displays
 	awful.key({ modkey }, "d", function()
-		awful.spawn.with_shell("/home/void/.config/awesome/scripts/display-menu.sh")
+		awful.spawn.with_shell("/home/empyrean/.config/awesome/scripts/display-menu.sh")
 		end, { description = "select displays", group = "launcher" }),
 
 	-- Power
 	awful.key({ modkey }, "p", function()
-		awful.spawn.with_shell("/home/void/.config/awesome/scripts/power-menu.sh")
+		awful.spawn.with_shell("/home/empyrean/.config/awesome/scripts/power-menu.sh")
 		end, { description = "open power menu", group = "launcher" }),
 
 	-- Power saving
 	awful.key({ modkey , "Shift",}, "p", function()
-		awful.spawn.with_shell("/home/void/.config/awesome/scripts/power-save.sh")
+		awful.spawn.with_shell("/home/empyrean/.config/awesome/scripts/power-save.sh")
 		end, { description = "select power saving mode", group = "launcher" }),
 
 	-- Wifi
 	awful.key({ modkey, "Shift", }, "w", function()
-		awful.spawn.with_shell("/home/void/.config/awesome/scripts/wifi-menu.sh")
+		awful.spawn.with_shell("/home/empyrean/.config/awesome/scripts/wifi-menu.sh")
 		end, { description = "show wifi networks", group = "launcher" }),
 
 	-- MEDIA CONTROL --

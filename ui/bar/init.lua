@@ -1,7 +1,7 @@
 local gears = require("gears")
 local awful = require("awful")
 local wibox = require("wibox")
-local theme = require("themes.forest")
+local theme = require("themes.vscode")
 local power_widget = require("ui.bar.widgets.power")
 local battery_widget = require("ui.bar.widgets.battery")
 local wifi_widget = require("ui.bar.widgets.wifi")
@@ -80,7 +80,7 @@ local function create_wibar(s)
         position = "bottom",
         screen = s,
         width = 1900,
-        opacity = 0.85,
+        opacity = 1.0,
         style = {
             shape = gears.shape.rounded_bar,
         }
@@ -102,6 +102,7 @@ local function create_wibar(s)
             wibox.widget.systray(),
             spacer,
             wifi_widget,
+            spacer,
             battery_widget,
             spacer,
             date_widget,
