@@ -1,4 +1,4 @@
--- Forest theme --
+-- Later This evening --
 
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
@@ -6,23 +6,23 @@ local dpi = xresources.apply_dpi
 
 local theme = {}
 
-theme.name = "vscode"
+theme.name = "later-this-evening"
 
 theme.font = "Iosevka Nerd Font 10"
 
 -- Colors
-theme.bg_normal = "#1e1e1e"
-theme.fg_normal = "#cccccc"
+theme.bg_normal = "#222222"
+theme.fg_normal = "#959595"
 
-theme.bg_focus = "#1e1e1e"
-theme.fg_focus = "#cccccc"
+theme.bg_focus = "#222222"
+theme.fg_focus = "#959595"
 
-theme.bg_minimize = "#598489"
-theme.fg_minimize = "#cccccc"
+theme.bg_minimize = "#3c3d3d"
+theme.fg_minimize = "#959595"
 
-theme.urgent = "#e65029"
+theme.urgent = "#d3232f"
 
-theme.accent = "#009afb"
+theme.accent = "#6699d6"
 
 -- System tray
 theme.bg_systray = theme.bg_normal

@@ -15,7 +15,7 @@ config.font = wezterm.font 'IosevkaNerdFontMono'
 config.font_size = 12
 
 -- Theme
-config.color_scheme = 'Vs Code Dark+ (Gogh)'
+config.color_scheme = 'Later This Evening (Gogh)'
 
 -- config.colors = {
 --   background = '#262626',
@@ -94,6 +94,11 @@ config.keys = {
       domain = 'CurrentPaneDomain'
     },
   },
+
+  -- Close Split
+  -- {
+  --
+  -- },
 }
 
 return config
