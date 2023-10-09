@@ -13,7 +13,7 @@ globalkeys = gears.table.join(
 
 	-- File manager
 	awful.key({ modkey, "Shift", }, "f", function()
-		awful.spawn.with_shell(string.format(terminal .. " -e xplr"))
+		awful.spawn.with_shell("thunar")
 		end, { description = "open file manager", group = "applications" }),
 
 	-- Web browser

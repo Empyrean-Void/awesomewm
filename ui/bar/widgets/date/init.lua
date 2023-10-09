@@ -1,4 +1,4 @@
-local theme = require("themes.vscode")
+local theme = require("themes.gruvbox")
 
 local date = wibox.widget {
   widget = wibox.widget.textclock("󰃰 %H:%M %b %d"),

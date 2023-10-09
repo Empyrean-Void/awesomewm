@@ -1,6 +1,6 @@
 local wibox = require("wibox")
 local awful = require("awful")
-local theme = require("themes.vscode")
+local theme = require("themes.gruvbox")
 
 local function battery_left_click()
     awful.spawn.easy_async({"bash", "-c", "~/.config/awesome/scripts/power-save.sh"})

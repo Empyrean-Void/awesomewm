@@ -1,4 +1,4 @@
-theme = require("themes.later-this-evening")
+theme = require("themes.gruvbox")
 
 local function power_button_left_click()
     awful.spawn.easy_async({"bash", "-c", "~/.config/awesome/scripts/power-menu.sh"}, function(stdout, stderr, exitreason, exitcode)

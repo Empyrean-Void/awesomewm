@@ -15,7 +15,7 @@ config.font = wezterm.font 'IosevkaNerdFontMono'
 config.font_size = 12
 
 -- Theme
-config.color_scheme = 'Later This Evening (Gogh)'
+config.color_scheme = 'Gruvbox Dark (Gogh)'
 
 -- config.colors = {
 --   background = '#262626',
