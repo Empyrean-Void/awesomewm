@@ -12,15 +12,15 @@ theme.font = "Iosevka Nerd Font 10"
 
 -- Colors
 theme.bg_normal = "#282828"
-theme.fg_normal = "#a0a0a0"
+theme.fg_normal = "#ebdbb2"
 
 theme.bg_focus = "#282828"
-theme.fg_focus = "#a0a0a0"
+theme.fg_focus = "#ebdbb2"
 
 theme.bg_minimize = "#928374"
-theme.fg_minimize = "#a0a0a0"
+theme.fg_minimize = "#ebdbb2"
 
-theme.urgent = "#ff669d"
+theme.urgent = "#cc241d"
 
 theme.accent = "#458588"
 

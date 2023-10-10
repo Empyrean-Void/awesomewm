@@ -18,7 +18,7 @@ globalkeys = gears.table.join(
 
 	-- Web browser
 	awful.key({ modkey }, "w", function()
-		awful.spawn.with_shell("firefox")
+		awful.spawn.with_shell("chromium")
 		end, { description = "open web browser", group = "applications" }),
 
 	-- MENUS --
@@ -47,6 +47,11 @@ globalkeys = gears.table.join(
 	awful.key({ modkey, "Shift", }, "w", function()
 		awful.spawn.with_shell("/home/empyrean/.config/awesome/scripts/wifi-menu.sh")
 		end, { description = "show wifi networks", group = "launcher" }),
+
+	-- Screenshots
+	awful.key({ modkey }, "Print", function()
+		awful.spawn.with_shell("/home/empyrean/.config/awesome/scripts/screenshot-menu.sh")
+		end, { description = "take screenshot", group = "launcher" }),
 
 	-- MEDIA CONTROL --
 
@@ -88,15 +93,6 @@ globalkeys = gears.table.join(
 	awful.key({}, "XF86MonBrightnessUp", function()
 		awful.spawn.with_shell("brightnessctl set +5%")
 		end, { description = "raise brightness", group = "brightness" }),
-
-	-- Screenshots
-	awful.key({ modkey }, "Print", function()
-		awful.spawn.with_shell("scrot ~/Pictures/screenshots/%Y-%m-%d-%H-%M-%S.png")
-		end, { description = "take fullscreen screenshot", group = "screenshot" }),
-
-	awful.key({ modkey, "Shift" }, "Print", function()
-		awful.spawn.with_shell("scrot -s ~/Pictures/screenshots/%Y-%m-%d-%H-%M-%S.png")
-		end, { description = "select screenshot area", group = "screenshot" }),
 
 	-- Builtin
 	awful.key({ modkey }, "s", hotkeys_popup.show_help, { description = "show help", group = "awesome" }),
