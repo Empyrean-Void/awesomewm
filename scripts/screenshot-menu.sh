@@ -15,7 +15,7 @@ run_rofi() {
 
 run_cmd() {
    if [[ $1 == '--screen' ]]; then
-      scrot ~/Pictures/screenshots/%Y-%m-%d-%H-%M-%S.png
+      scrot -d 1 ~/Pictures/screenshots/%Y-%m-%d-%H-%M-%S.png
       notify-send "Screenshot captured"
    elif [[ $1 == '--window' ]]; then
       scrot -s ~/Pictures/screenshots/%Y-%m-%d-%H-%M-%S.png

@@ -4,30 +4,24 @@ Dotfiles for the Awesome window manager
 
 ## Roadmap
 
+**Version 1.0.0**
+
 - [X] Improve wibar
-- [ ] Make configuration modular
-- [ ] Native (lua based) menus
-- [ ] Install script
-- [ ] AUR package
+- [X] Make configuration modular
+- [X] Install script
 
-## Customization
+## Installation
 
-Core functionality is configured in `rc.lua`, appearance is defined by a theme.
+Clone this repository:
 
-Default themes:
+`git clone https://github.com/Empyrean-Void/awesomewm ~/.config/awesome`
 
-- Forest
+Run the installation script:
 
-- Subtle Gray
+`cd ~/.config/awesome && ./install/install.sh`
 
-To create a theme simply copy and rename an existing theme, and modify it as you see fit.
+**It is recommended to look over the `pkglist.txt` file, not all users need Nvidia drivers.**
 
 ## Screenshots
 
-- Forest
-
-<img src="screenshots/forest.png" width="640" height="360">
-
-- Subtle Gray
-
-<img src="screenshots/subtle-gray.png" width="640" height="360">
+<img src="screenshots/screenshot.png" width="960" height="540">

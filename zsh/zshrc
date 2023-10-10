@@ -4,7 +4,7 @@ unsetopt beep notify
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/empyrean/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -17,7 +17,7 @@ prompt redhat
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Exports #
-source /home/empyrean/.config/awesome/zsh/zshenv
+source $HOME/.config/awesome/zsh/zshenv
 
 # Aliases #
 

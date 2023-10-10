@@ -80,6 +80,7 @@ theme.tasklist_fg_urgent = theme.fg_normal
 theme.tasklist_spacing = dpi(2)
 
 theme.tasklist_disable_icon = true
+theme.tasklist_plain_task_name = true
 
 -- Titlebar
 theme.titlebar_minimize_button_normal = string.format("%s/.config/awesome/themes/%s/titlebar/normal.svg", os.getenv("HOME"), theme.name)
