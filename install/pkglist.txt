@@ -1,5 +1,4 @@
 acpi
-archiso
 awesome
 base
 base-devel
@@ -8,11 +7,9 @@ bluez
 bluez-utils
 brightnessctl
 btop
-chromium
 discord
 dkms
 dosfstools
-efibootmgr
 envycontrol
 exfatprogs
 eza
@@ -36,8 +33,6 @@ mpv
 neovim
 networkmanager
 numlockx
-nvidia
-nvidia-lts
 obs-studio
 pfetch-git
 picom
@@ -47,7 +42,6 @@ pipewire-jack
 pipewire-pulse
 playerctl
 polkit-gnome
-power-profiles-daemon-git
 pulsemixer
 rofi
 rsync

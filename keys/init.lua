@@ -18,7 +18,7 @@ globalkeys = gears.table.join(
 
 	-- Web browser
 	awful.key({ modkey }, "w", function()
-		awful.spawn.with_shell("chromium")
+		awful.spawn.with_shell("firefox")
 		end, { description = "open web browser", group = "applications" }),
 
 	-- MENUS --

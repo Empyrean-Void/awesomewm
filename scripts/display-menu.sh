@@ -7,7 +7,7 @@ laptop="󰌢 Laptop display"
 
 rofi_cmd() {
    rofi -dmenu \
-      -i -p "Select display:"
+      -i -l 3 -p "Select display:"
 }
 
 run_rofi() {
@@ -17,7 +17,7 @@ run_rofi() {
 run_cmd() {
    if [[ $1 == '--dual' ]]; then
       xrandr --output HDMI-1-0 --mode 1920x1080 --pos 0x0 --rotate normal \
-             --output eDP-1 --mode 1920x1080 --pos 0x1080 --rotate normal 
+             --output eDP-1 --mode 1920x1080 --pos 1920x0 --rotate normal 
    elif [[ $1 == '--external' ]]; then
       xrandr --output HDMI-1-0 --mode 1920x1080 --pos 0x0 --rotate normal \
              --output eDP-1 --off 

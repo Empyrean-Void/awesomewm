@@ -6,7 +6,7 @@ window='󱣵 Select window'
 
 rofi_cmd() {
    rofi -dmenu \
-      -i -p "Screenshot:"
+      -i -l 2 -p "Screenshot:"
 }
 
 run_rofi() {

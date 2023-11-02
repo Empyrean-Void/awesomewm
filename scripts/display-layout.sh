@@ -4,7 +4,7 @@
 if [[ $(xrandr -q | grep "HDMI-1-0 connected") ]];
    then
       xrandr --output HDMI-1-0 --mode 1920x1080 --pos 0x0 --rotate normal \
-             --output eDP-1 --mode 1920x1080 --pos 0x1080 --rotate normal 
+             --output eDP-1 --mode 1920x1080 --pos 1920x0 --rotate normal 
 fi
 
 # Internel monitor (Nvidia)

@@ -8,7 +8,7 @@ lock='󰌾 Lock'
 
 rofi_cmd() {
    rofi -dmenu \
-      -i -p "Power menu:"
+      -i -l 4 -p "Power menu:"
 }
 
 run_rofi() {
