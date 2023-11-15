@@ -13,7 +13,7 @@ compinit
 # Prompt #
 autoload -Uz promptinit
 promptinit
-prompt redhat
+prompt adam1
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Exports #
@@ -39,3 +39,6 @@ alias gpl="git pull"
 
 # Top
 alias top="btop"
+
+# Ranger
+alias lf="ranger"
